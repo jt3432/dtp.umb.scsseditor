@@ -1,0 +1,53 @@
+﻿<form novalidate name="scssEditorForm"
+      ng-controller="DtpScssEditor.ScssEditorEditController"
+      ng-show="loaded"
+      ng-submit="save()"
+      val-form-manager>
+
+    <umb-panel ng-class="'editor-breadcrumb'">
+
+        <umb-header tabs="tabs">
+
+            <div class="span8">
+                <!--<umb-content-name placeholder="@placeholders_entername" ng-model="foodMenuItem.name" />-->
+                <h1>Edit SCSS File: <strong>{{scssFile.path}}</strong></h1>
+            </div>
+
+            <div class="span4">
+                <div class="btn-toolbar pull-right umb-btn-toolbar">
+                    <button type="submit" data-hotkey="ctrl+s" class="btn btn-success">
+                        <localize key="buttons_save">Save</localize>
+                    </button>
+                </div>
+            </div>
+        </umb-header>
+
+        <umb-tab-view>
+            <umb-tab id="tab1" rel="scss">
+
+                <div class="umb-pane pane">
+                    <div style="border: solid 1px #ddd">
+                        <textarea dtpng-codemirror ng-model="scssFile"></textarea>
+                    </div>
+                </div>
+
+            </umb-tab>
+            <umb-tab id="tab2" rel="properties">
+                <div class="umb-pane pane" style="">
+                    <div class="control-group umb-control-group" style="">
+
+                        <div class="umb-el-wrap ">
+                            <label class="control-label" for="inputPassword">Filename</label>
+                            <div class="controls controls-row">
+                                <input name="name" type="text" value="bootstrap.min" ng-model="scssFile.path" style="width:350px;">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </umb-tab>
+        </umb-tab-view>
+
+    </umb-panel>
+
+</form>

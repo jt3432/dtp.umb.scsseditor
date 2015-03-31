@@ -1,0 +1,37 @@
+﻿<div class="umb-dialog-body with-footer" ng-controller="DtpScssEditor.ScssEditorCreateController">
+    <form name="scssEditorItemForm" ng-submit="create(name)" val-form-manager>
+        <div class="umb-pane">
+            <h5>Create a folder under {{currentNode.name}} test</h5>
+
+            <div class="control-group umb-control-group">
+                <div class="umb-el-wrap ">
+                    <label class="control-label" for="name">Filename (without .scss, use / to make folders)</label>
+                    <div class="controls">
+                        <input type="text" name="name" id="name" ng-model="name" class="bigInput input-large-type input-block-level" placeholder="New Folder Name" autofocus required />
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="umb-pane btn-toolbar umb-btn-toolbar">
+                    <div class="control-group umb-control-group">
+                        <a href="" class="btn btn-link" ng-click="cancelCreate()">
+                            <localize key="general_cancel">Cancel</localize>
+                        </a>
+                        <button type="submit" data-hotkey="ctrl+s" class="btn btn-success">
+                            <localize key="general_create">Create</localize>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+</div>
+
+<div class="umb-dialog-footer btn-toolbar umb-btn-toolbar">
+    <button class="btn" ng-click="nav.hideDialog(true)">
+        <localize key="buttons_somethingElse">Do something else</localize>
+    </button>
+</div>

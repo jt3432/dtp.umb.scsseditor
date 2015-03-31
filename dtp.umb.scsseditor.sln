@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dtp.umb.scsseditor.cd", "dtp.umb.scsseditor.cd\dtp.umb.scsseditor.cd.csproj", "{FF9889A9-D996-4D65-970B-518FA9E1E997}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dtp.umb.scsseditor.lib", "dtp.umb.scsseditor.lib\dtp.umb.scsseditor.lib.csproj", "{B5321C0F-4F38-4F9E-85E2-05F71841364D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dtp.umb.scsseditor.web", "dtp.umb.scsseditor.web\dtp.umb.scsseditor.web.csproj", "{D17F7530-725E-4DF3-BE41-9601DD67B5B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{94BE2FE9-B7EC-4B04-900F-B4B3BDF1A1E2}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF9889A9-D996-4D65-970B-518FA9E1E997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF9889A9-D996-4D65-970B-518FA9E1E997}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF9889A9-D996-4D65-970B-518FA9E1E997}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF9889A9-D996-4D65-970B-518FA9E1E997}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5321C0F-4F38-4F9E-85E2-05F71841364D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5321C0F-4F38-4F9E-85E2-05F71841364D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5321C0F-4F38-4F9E-85E2-05F71841364D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5321C0F-4F38-4F9E-85E2-05F71841364D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D17F7530-725E-4DF3-BE41-9601DD67B5B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D17F7530-725E-4DF3-BE41-9601DD67B5B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D17F7530-725E-4DF3-BE41-9601DD67B5B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D17F7530-725E-4DF3-BE41-9601DD67B5B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
