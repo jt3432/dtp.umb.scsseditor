@@ -140,7 +140,10 @@ namespace dtp.umb.scsseditor.Controllers
 
             var fullPath = String.Format("{0}{1}.scss", _rootScssPath, relativeFilePath.Replace("/", @"\"));
             Directory.CreateDirectory(Path.GetDirectoryName(fullPath));
-            System.IO.File.Create(fullPath);
+            using (FileStream fs = System.IO.File.Create(fullPath))
+            {
+                fs.Close();
+            }
         }
 
         [System.Web.Http.AcceptVerbs("GET", "POST")]
