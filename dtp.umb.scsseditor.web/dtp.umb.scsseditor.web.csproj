@@ -285,6 +285,10 @@
     <Content Include="Config\ClientDependency.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\dtp.umb.scsseditor.cd\dtp.umb.scsseditor.cd.csproj">
+      <Project>{ff9889a9-d996-4d65-970b-518fa9e1e997}</Project>
+      <Name>dtp.umb.scsseditor.cd</Name>
+    </ProjectReference>
     <ProjectReference Include="..\dtp.umb.scsseditor.lib\dtp.umb.scsseditor.lib.csproj">
       <Project>{b5321c0f-4f38-4f9e-85e2-05f71841364d}</Project>
       <Name>dtp.umb.scsseditor.lib</Name>

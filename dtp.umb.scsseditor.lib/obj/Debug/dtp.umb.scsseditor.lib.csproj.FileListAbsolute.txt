@@ -146,6 +146,5 @@ C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.lib\bin\umbraco.DataLayer.
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.lib\bin\umbraco.editorControls.xml
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.lib\bin\umbraco.MacroEngines.xml
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.lib\bin\umbraco.providers.xml
-C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.lib\obj\Debug\dtp.umb.scsseditor.lib.csprojResolveAssemblyReference.cache
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.lib\obj\Debug\dtp.umb.scsseditor.lib.dll
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.lib\obj\Debug\dtp.umb.scsseditor.lib.pdb
