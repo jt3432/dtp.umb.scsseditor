@@ -2,6 +2,8 @@
 
 Once you go SCSS (http://sass-lang.com/) it is had to go back! This simple backoffice extention adds a SCSS file editor and ClientDependency compiler to our favorite CMS.
 
+Download: https://our.umbraco.org/projects/backoffice-extensions/backoffice-scss-editor
+
 <br />
 **To install:**<br />
 Download package and install via the Umbraco backoffice, than add the below httpHandler reference into your web.config under the <httpHandlers> node:
