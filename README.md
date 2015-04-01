@@ -4,7 +4,6 @@ Once you go SCSS (http://sass-lang.com/) it is had to go back! This simple backo
 
 <br />
 **To install:**
-
 Download package and install via the Umbraco backoffice, than add the below httpHandler reference into your web.config under the <httpHandlers> node:
 
 ```
@@ -19,7 +18,6 @@ Also add this handler under the <system.webServer><handlers> node:
 ```
 <br />
 **Web.Config settings:**
-
 The extention will add three app settings key to the web.config:
 
 ```
