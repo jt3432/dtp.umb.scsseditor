@@ -15,8 +15,8 @@ Download package and install via the Umbraco backoffice, than add the below http
 Also add this handler under the <system.webServer><handlers> node:
 
 ``
-<remove name="DtpScssHandler" />
-<add name="DtpScssHandler" path="*.scss" verb="GET" type="dtp.umb.scsseditor.cd.ScssHandler, dtp.umb.scsseditor.cd" resourceType="File" preCondition="" />
+    <remove name="DtpScssHandler" />  
+    <add name="DtpScssHandler" path="*.scss" verb="GET" type="dtp.umb.scsseditor.cd.ScssHandler, dtp.umb.scsseditor.cd" resourceType="File" preCondition="" />
 ``
 
 
@@ -25,9 +25,9 @@ Also add this handler under the <system.webServer><handlers> node:
 The extention will add three app settings key to the web.config:
 
 ``
-<add key="dtpScssEditor:Version" value="0.01" />
-<add key="dtpScssEditor:Root" value="~/scss/" />
-<add key="dtpScssEditor:DeleteEmptyDirectory" value="true" />
+    <add key="dtpScssEditor:Version" value="0.01" />  
+    <add key="dtpScssEditor:Root" value="~/scss/" />  
+    <add key="dtpScssEditor:DeleteEmptyDirectory" value="true" />
 ``
 
 
