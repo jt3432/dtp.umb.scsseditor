@@ -7,9 +7,9 @@ Once you go SCSS (http://sass-lang.com/) it is had to go back! This simple backo
 **To install:**
 
 Download package and install via the Umbraco backoffice, than add the below httpHandler reference into your web.config under the <httpHandlers> node:
-'''
+``
 <add path="*.scss" verb="GET" type="dtp.umb.scsseditor.cd.SassHandler, dtp.umb.scsseditor.cd" />
-'''
+``
 
 Also add this handler under the <system.webServer><handlers> node:
 '''
