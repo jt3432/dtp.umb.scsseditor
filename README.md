@@ -1,5 +1,4 @@
-## dtp.umb.scsseditor
-###Umbraco 7 Backoffice SCSS Editor
+##Umbraco 7 Backoffice SCSS Editor
 
 Once you go SCSS (http://sass-lang.com/) it is had to go back! This simple backoffice extention adds a SCSS file editor and ClientDependency compiler to our favorite CMS.
 
