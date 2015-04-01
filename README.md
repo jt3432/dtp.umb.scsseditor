@@ -31,7 +31,7 @@ The extention will add three app settings key to the web.config:
 * **dtpScssEditor:DeleteEmptyDirectory**, when true prevents the deletion of directories that are not empty. Just a save guard to protect you from deleting all your hard work.
 
 <br />
-**Using your SCSS files**<br />
+**Using your SCSS files:**<br />
 The point of this is to have some runtime compiled SCSS to CSS. To use your SCSS file in your site/templates include the Client Dependency MVC handler in your view, then add you SCSS file with the Client Dependency RequiresCss helper.
 
 ```
