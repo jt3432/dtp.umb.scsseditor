@@ -1,112 +1,761 @@
-﻿2015-03-31 08:17:30,631 [13] INFO  Umbraco.Core.PluginManager - [Thread 1] Determining hash of code files on disk
-2015-03-31 08:17:30,649 [13] INFO  Umbraco.Core.PluginManager - [Thread 1] Hash determined (took 10ms)
-2015-03-31 08:17:30,672 [13] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
-2015-03-31 08:17:31,049 [13] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 39 (took 373ms)
-2015-03-31 08:17:31,149 [13] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
-2015-03-31 08:17:31,169 [13] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 19ms)
-2015-03-31 08:17:31,170 [13] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
-2015-03-31 08:17:31,184 [13] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 16 (took 13ms)
-2015-03-31 08:17:31,207 [13] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
-2015-03-31 08:17:31,223 [13] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 4 (took 15ms)
-2015-03-31 08:17:31,223 [13] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
-2015-03-31 08:17:31,245 [13] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 39 (took 22ms)
-2015-03-31 08:17:31,297 [13] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
-2015-03-31 08:17:31,330 [13] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 32ms)
-2015-03-31 08:17:31,330 [13] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
-2015-03-31 08:17:31,388 [13] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 57ms)
-2015-03-31 08:17:32,270 [13] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 1] An unhandled exception occurred
-System.ArgumentException: A route named 'umbraco-api-DtpScssEditor-ScssFilesApi' is already in the route collection. Route names must be unique.
-Parameter name: name
-   at System.Web.Routing.RouteCollection.Add(String name, RouteBase item)
-   at System.Web.Http.RouteCollectionExtensions.MapHttpRoute(RouteCollection routes, String name, String routeTemplate, Object defaults, Object constraints, HttpMessageHandler handler)
-   at Umbraco.Web.Mvc.AreaRegistrationExtensions.RouteControllerPlugin(AreaRegistration area, String controllerName, Type controllerType, RouteCollection routes, String controllerSuffixName, String defaultAction, Object defaultId, String umbracoTokenValue, String routeTokens, Boolean isMvc, String areaPathPrefix)
-   at Umbraco.Web.Mvc.PluginControllerArea.MapRouteApiControllers(RouteCollection routes, IEnumerable`1 apiControllers)
-   at Umbraco.Web.Mvc.PluginControllerArea.RegisterArea(AreaRegistrationContext context)
-   at Umbraco.Web.RouteCollectionExtensions.RegisterArea[T](RouteCollection routes, T area)
-   at Umbraco.Web.WebBootManager.RoutePluginControllers()
-   at Umbraco.Web.WebBootManager.CreateRoutes()
-   at Umbraco.Web.WebBootManager.Complete(Action`1 afterComplete)
-   at Umbraco.Core.UmbracoApplicationBase.StartApplication(Object sender, EventArgs e)
-   at Umbraco.Core.UmbracoApplicationBase.Application_Start(Object sender, EventArgs e)
-2015-03-31 08:18:12,278 [13] INFO  Umbraco.Core.UmbracoApplicationBase - [Thread 15] Application shutdown. Reason: InitializationError
-2015-03-31 08:25:26,230 [25] INFO  Umbraco.Core.PluginManager - [Thread 1] Determining hash of code files on disk
-2015-03-31 08:25:26,242 [25] INFO  Umbraco.Core.PluginManager - [Thread 1] Hash determined (took 7ms)
-2015-03-31 08:25:26,258 [25] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
-2015-03-31 08:25:26,550 [25] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 38 (took 290ms)
-2015-03-31 08:25:26,623 [25] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
-2015-03-31 08:25:26,631 [25] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 8ms)
-2015-03-31 08:25:26,631 [25] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
-2015-03-31 08:25:26,649 [25] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 16 (took 17ms)
-2015-03-31 08:25:26,670 [25] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
-2015-03-31 08:25:26,679 [25] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 4 (took 8ms)
-2015-03-31 08:25:26,679 [25] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
-2015-03-31 08:25:26,696 [25] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 37 (took 16ms)
-2015-03-31 08:25:26,747 [25] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
-2015-03-31 08:25:26,757 [25] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 10ms)
-2015-03-31 08:25:26,757 [25] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
-2015-03-31 08:25:26,770 [25] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 12ms)
-2015-03-31 08:25:27,572 [25] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 1] Initializing Examine and binding to business logic events
-2015-03-31 08:25:27,848 [25] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 1] Adding examine event handlers for index providers: 3
-2015-03-31 08:25:29,064 [25] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
-2015-03-31 08:25:29,084 [25] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 44 (took 20ms)
-2015-03-31 08:25:30,009 [25] INFO  umbraco.content - [Thread 1] Loading content from database...
-2015-03-31 08:25:30,020 [25] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
-2015-03-31 08:25:30,039 [25] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 23 (took 18ms)
-2015-03-31 08:25:30,684 [25] INFO  Umbraco.Web.UmbracoModule - [Thread 16] Setting OriginalRequestUrl: dev.umb.dtp.local:80/umbraco
-2015-03-31 08:25:48,945 [25] ERROR Umbraco.Web.UI.CdfLogger - [Thread 10] Could not load file contents from /App_Plugins/DtpScssEditor/backOffice/DtpScssEditorTree/ng/ui-codemirror.js. Domain is not white-listed.
-2015-03-31 08:25:57,434 [25] INFO  Umbraco.Web.Security.WebSecurity - [Thread 19] User Id: 0 logged in
-2015-03-31 08:25:57,590 [25] INFO  Umbraco.Core.PluginManager - [Thread 10] Starting resolution types of Umbraco.Web.Trees.TreeController
-2015-03-31 08:25:57,621 [25] INFO  Umbraco.Core.PluginManager - [Thread 10] Completed resolution of types of Umbraco.Web.Trees.TreeController, found 5 (took 24ms)
-2015-03-31 08:25:57,810 [25] INFO  Umbraco.Core.PluginManager - [Thread 16] Starting resolution types of umbraco.interfaces.IApplication
-2015-03-31 08:25:57,834 [25] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.IApplication, found 7 (took 24ms)
-2015-03-31 08:25:57,948 [25] INFO  Umbraco.Core.PluginManager - [Thread 16] Starting resolution types of umbraco.interfaces.ITree
-2015-03-31 08:25:57,961 [25] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.ITree, found 35 (took 12ms)
-2015-03-31 08:25:57,971 [25] WARN  Umbraco.Core.Services.ApplicationTreeService - [Thread 16] The tree definition: <add initialize="true" sortOrder="0" alias="dtpSassEditorTree" application="settings" title="Scss Files" iconClosed="icon-folder" iconOpen="icon-folder-open" type="dtp.umb.sasseditor.lib.Trees.SassEditorTreeController, dtp.umb.sasseditor.lib" /> could not be resolved to a .Net object type
-2015-03-31 08:25:57,971 [25] WARN  Umbraco.Core.Services.ApplicationTreeService - [Thread 16] The tree definition: <add initialize="true" sortOrder="0" alias="dtpScssEditorTree" application="settings" title="Scss Files" iconClosed="icon-folder" iconOpen="icon-folder-open" type="dtp.umb.scsseditor.lib.Trees.ScssEditorTreeController, dtp.umb.sasseditor.lib" /> could not be resolved to a .Net object type
-2015-03-31 08:25:57,976 [25] INFO  Umbraco.Core.PluginManager - [Thread 16] Starting resolution types of Umbraco.Web.Trees.TreeController
-2015-03-31 08:25:57,976 [25] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of Umbraco.Web.Trees.TreeController, found 5 (took 0ms)
-2015-03-31 08:25:57,978 [25] INFO  Umbraco.Core.PluginManager - [Thread 16] Starting resolution types of umbraco.interfaces.ITree
-2015-03-31 08:25:58,011 [25] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.ITree, found 19 (took 32ms)
-2015-03-31 08:26:36,554 [25] INFO  umbraco.BusinessLogic.Log - [Thread 16] Log scrubbed.  Removed all items older than 2015-01-30 08:26:36
-2015-03-31 08:32:37,242 [28] INFO  Umbraco.Core.PluginManager - [Thread 27] Determining hash of code files on disk
-2015-03-31 08:32:37,258 [28] INFO  Umbraco.Core.PluginManager - [Thread 27] Hash determined (took 8ms)
-2015-03-31 08:32:37,258 [28] INFO  Umbraco.Core.PluginManager - [Thread 27] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
-2015-03-31 08:32:37,274 [28] INFO  Umbraco.Core.PluginManager - [Thread 27] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 38 (took 15ms)
-2015-03-31 08:32:37,398 [28] INFO  Umbraco.Core.PluginManager - [Thread 27] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
-2015-03-31 08:32:37,398 [28] INFO  Umbraco.Core.PluginManager - [Thread 27] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
-2015-03-31 08:32:37,398 [28] INFO  Umbraco.Core.PluginManager - [Thread 27] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
-2015-03-31 08:32:37,398 [28] INFO  Umbraco.Core.PluginManager - [Thread 27] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 16 (took 1ms)
-2015-03-31 08:32:37,414 [28] INFO  Umbraco.Core.PluginManager - [Thread 27] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
-2015-03-31 08:32:37,414 [28] INFO  Umbraco.Core.PluginManager - [Thread 27] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 4 (took 0ms)
-2015-03-31 08:32:37,414 [28] INFO  Umbraco.Core.PluginManager - [Thread 27] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
-2015-03-31 08:32:37,414 [28] INFO  Umbraco.Core.PluginManager - [Thread 27] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 37 (took 3ms)
-2015-03-31 08:32:37,461 [28] INFO  Umbraco.Core.PluginManager - [Thread 27] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
-2015-03-31 08:32:37,461 [28] INFO  Umbraco.Core.PluginManager - [Thread 27] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 0ms)
-2015-03-31 08:32:37,461 [28] INFO  Umbraco.Core.PluginManager - [Thread 27] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
-2015-03-31 08:32:37,461 [28] INFO  Umbraco.Core.PluginManager - [Thread 27] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 0ms)
-2015-03-31 08:32:38,416 [28] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 27] Initializing Examine and binding to business logic events
-2015-03-31 08:32:38,588 [28] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 27] Adding examine event handlers for index providers: 3
-2015-03-31 08:32:39,150 [28] INFO  Umbraco.Web.UmbracoModule - [Thread 19] Setting OriginalRequestUrl: dev.umb.dtp.local:80/umbraco
-2015-03-31 08:32:48,298 [12] INFO  Umbraco.Core.PluginManager - [Thread 27] Determining hash of code files on disk
-2015-03-31 08:32:48,313 [12] INFO  Umbraco.Core.PluginManager - [Thread 27] Hash determined (took 11ms)
-2015-03-31 08:32:48,329 [12] INFO  Umbraco.Core.PluginManager - [Thread 27] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
-2015-03-31 08:32:48,345 [12] INFO  Umbraco.Core.PluginManager - [Thread 27] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 38 (took 20ms)
-2015-03-31 08:32:48,454 [12] INFO  Umbraco.Core.PluginManager - [Thread 27] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
-2015-03-31 08:32:48,469 [12] INFO  Umbraco.Core.PluginManager - [Thread 27] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 1ms)
-2015-03-31 08:32:48,469 [12] INFO  Umbraco.Core.PluginManager - [Thread 27] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
-2015-03-31 08:32:48,469 [12] INFO  Umbraco.Core.PluginManager - [Thread 27] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 16 (took 2ms)
-2015-03-31 08:32:48,485 [12] INFO  Umbraco.Core.PluginManager - [Thread 27] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
-2015-03-31 08:32:48,485 [12] INFO  Umbraco.Core.PluginManager - [Thread 27] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 4 (took 0ms)
-2015-03-31 08:32:48,485 [12] INFO  Umbraco.Core.PluginManager - [Thread 27] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
-2015-03-31 08:32:48,485 [12] INFO  Umbraco.Core.PluginManager - [Thread 27] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 37 (took 3ms)
-2015-03-31 08:32:48,532 [12] INFO  Umbraco.Core.PluginManager - [Thread 27] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
-2015-03-31 08:32:48,532 [12] INFO  Umbraco.Core.PluginManager - [Thread 27] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 0ms)
-2015-03-31 08:32:48,532 [12] INFO  Umbraco.Core.PluginManager - [Thread 27] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
-2015-03-31 08:32:48,532 [12] INFO  Umbraco.Core.PluginManager - [Thread 27] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 0ms)
-2015-03-31 08:32:49,437 [12] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 27] Initializing Examine and binding to business logic events
-2015-03-31 08:32:49,577 [12] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 27] Adding examine event handlers for index providers: 3
-2015-03-31 08:32:50,030 [12] INFO  Umbraco.Web.UmbracoModule - [Thread 16] Setting OriginalRequestUrl: dev.umb.dtp.local:80/umbraco
-2015-03-31 08:32:55,463 [25] INFO  Umbraco.Core.UmbracoApplicationBase - [Thread 19] Application shutdown. Reason: ConfigurationChange
-2015-03-31 08:33:16,947 [28] INFO  Umbraco.Core.UmbracoApplicationBase - [Thread 16] Application shutdown. Reason: ConfigurationChange
-2015-03-31 08:33:50,858 [12] INFO  umbraco.BusinessLogic.Log - [Thread 16] Log scrubbed.  Removed all items older than 2015-01-30 08:33:50
-2015-03-31 08:43:43,535 [12] INFO  Umbraco.Core.UmbracoApplicationBase - [Thread 16] Application shutdown. Reason: ConfigurationChange
+﻿2015-04-05 15:38:40,928 [10] INFO  Umbraco.Core.PluginManager - [Thread 1] Determining hash of code files on disk
+2015-04-05 15:38:40,941 [10] INFO  Umbraco.Core.PluginManager - [Thread 1] Hash determined (took 9ms)
+2015-04-05 15:38:40,945 [10] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+2015-04-05 15:38:40,957 [10] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 38 (took 10ms)
+2015-04-05 15:38:41,021 [10] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+2015-04-05 15:38:41,022 [10] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+2015-04-05 15:38:41,022 [10] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+2015-04-05 15:38:41,023 [10] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 16 (took 0ms)
+2015-04-05 15:38:41,037 [10] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+2015-04-05 15:38:41,037 [10] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 4 (took 0ms)
+2015-04-05 15:38:41,038 [10] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+2015-04-05 15:38:41,040 [10] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 37 (took 2ms)
+2015-04-05 15:38:41,068 [10] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+2015-04-05 15:38:41,069 [10] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 0ms)
+2015-04-05 15:38:41,069 [10] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+2015-04-05 15:38:41,069 [10] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 0ms)
+2015-04-05 15:38:41,706 [10] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 1] Initializing Examine and binding to business logic events
+2015-04-05 15:38:41,914 [10] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 1] Adding examine event handlers for index providers: 3
+2015-04-05 15:38:42,235 [10] INFO  Umbraco.Web.UmbracoModule - [Thread 6] Setting OriginalRequestUrl: dev.umb.dtp.local:80/umbraco
+2015-04-05 15:38:42,523 [10] INFO  Umbraco.Core.PluginManager - [Thread 8] Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+2015-04-05 15:38:42,524 [10] INFO  Umbraco.Core.PluginManager - [Thread 8] Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 44 (took 0ms)
+2015-04-05 15:38:54,000 [10] INFO  Umbraco.Core.PluginManager - [Thread 7] Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+2015-04-05 15:38:54,000 [10] INFO  Umbraco.Core.PluginManager - [Thread 7] Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 23 (took 0ms)
+2015-04-05 15:38:54,345 [10] INFO  Umbraco.Web.Security.WebSecurity - [Thread 7] User Id: 0 logged in
+2015-04-05 15:38:54,427 [10] INFO  Umbraco.Core.PluginManager - [Thread 6] Starting resolution types of Umbraco.Web.Trees.TreeController
+2015-04-05 15:38:54,428 [10] INFO  Umbraco.Core.PluginManager - [Thread 6] Completed resolution of types of Umbraco.Web.Trees.TreeController, found 5 (took 0ms)
+2015-04-05 15:38:54,523 [10] INFO  Umbraco.Core.PluginManager - [Thread 6] Starting resolution types of umbraco.interfaces.IApplication
+2015-04-05 15:38:54,524 [10] INFO  Umbraco.Core.PluginManager - [Thread 6] Completed resolution of types of umbraco.interfaces.IApplication, found 7 (took 0ms)
+2015-04-05 15:38:54,566 [10] INFO  Umbraco.Core.PluginManager - [Thread 5] Starting resolution types of umbraco.interfaces.ITree
+2015-04-05 15:38:54,567 [10] INFO  Umbraco.Core.PluginManager - [Thread 5] Completed resolution of types of umbraco.interfaces.ITree, found 35 (took 0ms)
+2015-04-05 15:38:54,573 [10] WARN  Umbraco.Core.Services.ApplicationTreeService - [Thread 5] The tree definition: <add initialize="true" sortOrder="0" alias="dtpSassEditorTree" application="settings" title="Scss Files" iconClosed="icon-folder" iconOpen="icon-folder-open" type="dtp.umb.sasseditor.lib.Trees.SassEditorTreeController, dtp.umb.sasseditor.lib" /> could not be resolved to a .Net object type
+2015-04-05 15:38:54,573 [10] WARN  Umbraco.Core.Services.ApplicationTreeService - [Thread 5] The tree definition: <add initialize="true" sortOrder="0" alias="dtpScssEditorTree" application="settings" title="Scss Files" iconClosed="icon-folder" iconOpen="icon-folder-open" type="dtp.umb.scsseditor.lib.Trees.ScssEditorTreeController, dtp.umb.sasseditor.lib" /> could not be resolved to a .Net object type
+2015-04-05 15:38:54,576 [10] INFO  Umbraco.Core.PluginManager - [Thread 5] Starting resolution types of Umbraco.Web.Trees.TreeController
+2015-04-05 15:38:54,576 [10] INFO  Umbraco.Core.PluginManager - [Thread 5] Completed resolution of types of Umbraco.Web.Trees.TreeController, found 5 (took 0ms)
+2015-04-05 15:38:54,578 [10] INFO  Umbraco.Core.PluginManager - [Thread 5] Starting resolution types of umbraco.interfaces.ITree
+2015-04-05 15:38:54,578 [10] INFO  Umbraco.Core.PluginManager - [Thread 5] Completed resolution of types of umbraco.interfaces.ITree, found 19 (took 0ms)
+2015-04-05 15:39:42,412 [10] INFO  umbraco.BusinessLogic.Log - [Thread 5] Log scrubbed.  Removed all items older than 2015-02-04 15:39:42
+2015-04-05 15:39:59,738 [10] INFO  umbraco.content - [Thread 8] Loading content from disk cache...
+2015-04-05 15:40:54,425 [10] INFO  Umbraco.Core.PluginManager - [Thread 24] Starting resolution types of umbraco.interfaces.ICacheRefresher
+2015-04-05 15:40:54,440 [10] INFO  Umbraco.Core.PluginManager - [Thread 24] Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 20 (took 12ms)
+2015-04-05 15:46:43,502 [67] INFO  Umbraco.Core.PluginManager - [Thread 1] Determining hash of code files on disk
+2015-04-05 15:46:43,510 [67] INFO  Umbraco.Core.PluginManager - [Thread 1] Hash determined (took 4ms)
+2015-04-05 15:46:43,516 [67] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+2015-04-05 15:46:43,527 [67] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 38 (took 11ms)
+2015-04-05 15:46:43,592 [67] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+2015-04-05 15:46:43,592 [67] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+2015-04-05 15:46:43,593 [67] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+2015-04-05 15:46:43,593 [67] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 16 (took 0ms)
+2015-04-05 15:46:43,606 [67] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+2015-04-05 15:46:43,607 [67] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 4 (took 0ms)
+2015-04-05 15:46:43,607 [67] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+2015-04-05 15:46:43,611 [67] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 37 (took 3ms)
+2015-04-05 15:46:43,635 [67] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+2015-04-05 15:46:43,635 [67] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 0ms)
+2015-04-05 15:46:43,635 [67] INFO  Umbraco.Core.PluginManager - [Thread 1] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+2015-04-05 15:46:43,636 [67] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 0ms)
+2015-04-05 15:46:44,120 [67] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 1] Initializing Examine and binding to business logic events
+2015-04-05 15:46:44,184 [67] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 1] Adding examine event handlers for index providers: 3
+2015-04-05 15:46:44,473 [67] INFO  Umbraco.Web.UmbracoModule - [Thread 61] Setting OriginalRequestUrl: dev.umb.dtp.local:80/umbraco
+2015-04-05 15:46:44,692 [67] INFO  umbraco.content - [Thread 51] Loading content from disk cache...
+2015-04-05 15:46:44,725 [67] INFO  Umbraco.Core.PluginManager - [Thread 61] Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+2015-04-05 15:46:44,727 [67] INFO  Umbraco.Core.PluginManager - [Thread 61] Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 23 (took 0ms)
+2015-04-05 15:46:45,043 [67] INFO  Umbraco.Core.PluginManager - [Thread 51] Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+2015-04-05 15:46:45,044 [67] INFO  Umbraco.Core.PluginManager - [Thread 51] Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 44 (took 0ms)
+2015-04-05 15:47:12,057 [10] INFO  Umbraco.Core.UmbracoApplicationBase - [Thread 59] Application shutdown. Reason: ConfigurationChange
+2015-04-05 15:47:42,528 [63] INFO  Umbraco.Core.PluginManager - [Thread 64] Determining hash of code files on disk
+2015-04-05 15:47:42,536 [63] INFO  Umbraco.Core.PluginManager - [Thread 64] Hash determined (took 4ms)
+2015-04-05 15:47:42,541 [63] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+2015-04-05 15:47:42,551 [63] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 38 (took 10ms)
+2015-04-05 15:47:42,610 [63] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+2015-04-05 15:47:42,610 [63] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+2015-04-05 15:47:42,611 [63] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+2015-04-05 15:47:42,611 [63] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 16 (took 0ms)
+2015-04-05 15:47:42,623 [63] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+2015-04-05 15:47:42,624 [63] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 4 (took 0ms)
+2015-04-05 15:47:42,624 [63] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+2015-04-05 15:47:42,628 [63] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 37 (took 4ms)
+2015-04-05 15:47:42,655 [63] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+2015-04-05 15:47:42,656 [63] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 0ms)
+2015-04-05 15:47:42,656 [63] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+2015-04-05 15:47:42,656 [63] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 0ms)
+2015-04-05 15:47:43,123 [63] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 64] Initializing Examine and binding to business logic events
+2015-04-05 15:47:43,185 [63] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 64] Adding examine event handlers for index providers: 3
+2015-04-05 15:47:43,491 [63] INFO  Umbraco.Web.UmbracoModule - [Thread 69] Setting OriginalRequestUrl: dev.umb.dtp.local:80/umbraco
+2015-04-05 15:47:43,512 [63] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 69] An unhandled exception occurred
+System.IO.FileNotFoundException: Could not load file or assembly 'dtp.umb.scsseditor.cd' or one of its dependencies. The system cannot find the file specified.
+File name: 'dtp.umb.scsseditor.cd'
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2015-04-05 15:47:44,874 [67] INFO  umbraco.BusinessLogic.Log - [Thread 69] Log scrubbed.  Removed all items older than 2015-02-04 15:47:44
+2015-04-05 15:48:05,672 [45] INFO  Umbraco.Core.PluginManager - [Thread 64] Determining hash of code files on disk
+2015-04-05 15:48:05,681 [45] INFO  Umbraco.Core.PluginManager - [Thread 64] Hash determined (took 5ms)
+2015-04-05 15:48:05,713 [45] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+2015-04-05 15:48:05,901 [45] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 38 (took 183ms)
+2015-04-05 15:48:05,974 [45] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+2015-04-05 15:48:05,979 [45] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 5ms)
+2015-04-05 15:48:05,980 [45] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+2015-04-05 15:48:05,989 [45] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 16 (took 9ms)
+2015-04-05 15:48:06,000 [45] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+2015-04-05 15:48:06,005 [45] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 4 (took 5ms)
+2015-04-05 15:48:06,005 [45] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+2015-04-05 15:48:06,012 [45] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 37 (took 7ms)
+2015-04-05 15:48:06,036 [45] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+2015-04-05 15:48:06,042 [45] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 5ms)
+2015-04-05 15:48:06,042 [45] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+2015-04-05 15:48:06,053 [45] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 10ms)
+2015-04-05 15:48:06,528 [45] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 64] Initializing Examine and binding to business logic events
+2015-04-05 15:48:06,585 [45] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 64] Adding examine event handlers for index providers: 3
+2015-04-05 15:48:06,748 [45] INFO  Umbraco.Web.UmbracoModule - [Thread 65] Setting OriginalRequestUrl: dev.umb.dtp.local:80/umbraco
+2015-04-05 15:48:06,766 [45] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 65] An unhandled exception occurred
+System.IO.FileNotFoundException: Could not load file or assembly 'dtp.umb.scsseditor.cd' or one of its dependencies. The system cannot find the file specified.
+File name: 'dtp.umb.scsseditor.cd'
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2015-04-05 15:48:10,494 [67] INFO  Umbraco.Core.UmbracoApplicationBase - [Thread 66] Application shutdown. Reason: ConfigurationChange
+2015-04-05 15:48:26,711 [63] INFO  Umbraco.Core.UmbracoApplicationBase - [Thread 71] Application shutdown. Reason: BinDirChangeOrDirectoryRename
+2015-04-05 15:48:32,987 [45] INFO  umbraco.content - [Thread 14] Loading content from disk cache...
+2015-04-05 15:48:33,057 [45] INFO  Umbraco.Core.PluginManager - [Thread 14] Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+2015-04-05 15:48:33,064 [45] INFO  Umbraco.Core.PluginManager - [Thread 14] Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 23 (took 7ms)
+2015-04-05 15:48:33,387 [45] INFO  Umbraco.Core.PluginManager - [Thread 14] Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+2015-04-05 15:48:33,399 [45] INFO  Umbraco.Core.PluginManager - [Thread 14] Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 44 (took 11ms)
+2015-04-05 15:48:42,357 [45] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 13] An unhandled exception occurred
+System.IO.FileNotFoundException: Could not load file or assembly 'dtp.umb.scsseditor.cd' or one of its dependencies. The system cannot find the file specified.
+File name: 'dtp.umb.scsseditor.cd'
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2015-04-05 15:48:44,948 [45] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 58] An unhandled exception occurred
+System.IO.FileNotFoundException: Could not load file or assembly 'dtp.umb.scsseditor.cd' or one of its dependencies. The system cannot find the file specified.
+File name: 'dtp.umb.scsseditor.cd'
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2015-04-05 15:49:25,743 [45] INFO  umbraco.BusinessLogic.Log - [Thread 13] Log scrubbed.  Removed all items older than 2015-02-04 15:49:25
+2015-04-05 15:51:45,709 [40] INFO  Umbraco.Core.PluginManager - [Thread 64] Determining hash of code files on disk
+2015-04-05 15:51:45,717 [40] INFO  Umbraco.Core.PluginManager - [Thread 64] Hash determined (took 5ms)
+2015-04-05 15:51:45,722 [40] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+2015-04-05 15:51:45,735 [40] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 38 (took 11ms)
+2015-04-05 15:51:45,809 [40] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+2015-04-05 15:51:45,810 [40] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+2015-04-05 15:51:45,810 [40] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+2015-04-05 15:51:45,811 [40] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 16 (took 0ms)
+2015-04-05 15:51:45,824 [40] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+2015-04-05 15:51:45,825 [40] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 4 (took 1ms)
+2015-04-05 15:51:45,826 [40] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+2015-04-05 15:51:45,830 [40] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 37 (took 4ms)
+2015-04-05 15:51:45,861 [40] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+2015-04-05 15:51:45,862 [40] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 0ms)
+2015-04-05 15:51:45,862 [40] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+2015-04-05 15:51:45,862 [40] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 0ms)
+2015-04-05 15:51:46,571 [40] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 64] Initializing Examine and binding to business logic events
+2015-04-05 15:51:46,657 [40] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 64] Adding examine event handlers for index providers: 3
+2015-04-05 15:51:47,062 [40] INFO  Umbraco.Web.UmbracoModule - [Thread 43] Setting OriginalRequestUrl: dev.umb.dtp.local:80/umbraco
+2015-04-05 15:51:47,090 [40] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 43] An unhandled exception occurred
+System.IO.FileNotFoundException: Could not load file or assembly 'dtp.umb.scsseditor.cd' or one of its dependencies. The system cannot find the file specified.
+File name: 'dtp.umb.scsseditor.cd'
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2015-04-05 15:51:56,456 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Determining hash of code files on disk
+2015-04-05 15:51:56,467 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Hash determined (took 6ms)
+2015-04-05 15:51:56,477 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+2015-04-05 15:51:56,751 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 38 (took 273ms)
+2015-04-05 15:51:56,817 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+2015-04-05 15:51:56,825 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 7ms)
+2015-04-05 15:51:56,825 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+2015-04-05 15:51:56,832 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 16 (took 7ms)
+2015-04-05 15:51:56,847 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+2015-04-05 15:51:56,853 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 4 (took 6ms)
+2015-04-05 15:51:56,854 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+2015-04-05 15:51:56,862 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 37 (took 8ms)
+2015-04-05 15:51:56,896 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+2015-04-05 15:51:56,903 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 7ms)
+2015-04-05 15:51:56,903 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+2015-04-05 15:51:56,911 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 7ms)
+2015-04-05 15:51:57,595 [41] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 64] Initializing Examine and binding to business logic events
+2015-04-05 15:51:57,676 [41] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 64] Adding examine event handlers for index providers: 3
+2015-04-05 15:52:05,268 [41] INFO  Umbraco.Web.UmbracoModule - [Thread 14] Setting OriginalRequestUrl: dev.umb.dtp.local:80/umbraco
+2015-04-05 15:52:13,259 [45] INFO  Umbraco.Core.UmbracoApplicationBase - [Thread 66] Application shutdown. Reason: ConfigurationChange
+2015-04-05 15:52:14,112 [41] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 14] An unhandled exception occurred
+System.IO.FileNotFoundException: Could not load file or assembly 'dtp.umb.scsseditor.cd' or one of its dependencies. The system cannot find the file specified.
+File name: 'dtp.umb.scsseditor.cd'
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+=== Pre-bind state information ===
+LOG: DisplayName = dtp.umb.scsseditor.cd
+ (Partial)
+WRN: Partial binding information was supplied for an assembly:
+WRN: Assembly Name: dtp.umb.scsseditor.cd | Domain ID: 7
+WRN: A partial bind occurs when only part of the assembly display name is provided.
+WRN: This might result in the binder loading an incorrect assembly.
+WRN: It is recommended to provide a fully specified textual identity for the assembly,
+WRN: that consists of the simple name, version, culture, and public key token.
+WRN: See whitepaper http://go.microsoft.com/fwlink/?LinkId=109270 for more information and common solutions to this issue.
+LOG: Appbase = file:///D:/Clients Files/Duct Tape Programming/Projects/Umbraco Customizations/dtp.umb.scsseditor/dtp.umb.scsseditor.web/
+LOG: Initial PrivatePath = D:\Clients Files\Duct Tape Programming\Projects\Umbraco Customizations\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin
+Calling assembly : (Unknown).
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: D:\Clients Files\Duct Tape Programming\Projects\Umbraco Customizations\dtp.umb.scsseditor\dtp.umb.scsseditor.web\web.config
+LOG: Using host configuration file: C:\Windows\Microsoft.NET\Framework\v4.0.30319\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Policy not being applied to reference at this time (private, custom, partial, or location-based assembly bind).
+LOG: Attempting download of new URL file:///C:/Windows/Microsoft.NET/Framework/v4.0.30319/Temporary ASP.NET Files/root/21c5ae3c/5b83475d/dtp.umb.scsseditor.cd.DLL.
+LOG: Attempting download of new URL file:///C:/Windows/Microsoft.NET/Framework/v4.0.30319/Temporary ASP.NET Files/root/21c5ae3c/5b83475d/dtp.umb.scsseditor.cd/dtp.umb.scsseditor.cd.DLL.
+LOG: Attempting download of new URL file:///D:/Clients Files/Duct Tape Programming/Projects/Umbraco Customizations/dtp.umb.scsseditor/dtp.umb.scsseditor.web/bin/dtp.umb.scsseditor.cd.DLL.
+LOG: Attempting download of new URL file:///D:/Clients Files/Duct Tape Programming/Projects/Umbraco Customizations/dtp.umb.scsseditor/dtp.umb.scsseditor.web/bin/dtp.umb.scsseditor.cd/dtp.umb.scsseditor.cd.DLL.
+LOG: Attempting download of new URL file:///C:/Windows/Microsoft.NET/Framework/v4.0.30319/Temporary ASP.NET Files/root/21c5ae3c/5b83475d/dtp.umb.scsseditor.cd.EXE.
+LOG: Attempting download of new URL file:///C:/Windows/Microsoft.NET/Framework/v4.0.30319/Temporary ASP.NET Files/root/21c5ae3c/5b83475d/dtp.umb.scsseditor.cd/dtp.umb.scsseditor.cd.EXE.
+LOG: Attempting download of new URL file:///D:/Clients Files/Duct Tape Programming/Projects/Umbraco Customizations/dtp.umb.scsseditor/dtp.umb.scsseditor.web/bin/dtp.umb.scsseditor.cd.EXE.
+LOG: Attempting download of new URL file:///D:/Clients Files/Duct Tape Programming/Projects/Umbraco Customizations/dtp.umb.scsseditor/dtp.umb.scsseditor.web/bin/dtp.umb.scsseditor.cd/dtp.umb.scsseditor.cd.EXE.
+
+2015-04-05 15:52:21,566 [40] INFO  Umbraco.Core.UmbracoApplicationBase - [Thread 58] Application shutdown. Reason: BinDirChangeOrDirectoryRename
+2015-04-05 15:52:23,045 [41] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 14] An unhandled exception occurred
+System.IO.FileNotFoundException: Could not load file or assembly 'dtp.umb.scsseditor.cd' or one of its dependencies. The system cannot find the file specified.
+File name: 'dtp.umb.scsseditor.cd'
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+=== Pre-bind state information ===
+LOG: DisplayName = dtp.umb.scsseditor.cd
+ (Partial)
+WRN: Partial binding information was supplied for an assembly:
+WRN: Assembly Name: dtp.umb.scsseditor.cd | Domain ID: 7
+WRN: A partial bind occurs when only part of the assembly display name is provided.
+WRN: This might result in the binder loading an incorrect assembly.
+WRN: It is recommended to provide a fully specified textual identity for the assembly,
+WRN: that consists of the simple name, version, culture, and public key token.
+WRN: See whitepaper http://go.microsoft.com/fwlink/?LinkId=109270 for more information and common solutions to this issue.
+LOG: Appbase = file:///D:/Clients Files/Duct Tape Programming/Projects/Umbraco Customizations/dtp.umb.scsseditor/dtp.umb.scsseditor.web/
+LOG: Initial PrivatePath = D:\Clients Files\Duct Tape Programming\Projects\Umbraco Customizations\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin
+Calling assembly : (Unknown).
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: D:\Clients Files\Duct Tape Programming\Projects\Umbraco Customizations\dtp.umb.scsseditor\dtp.umb.scsseditor.web\web.config
+LOG: Using host configuration file: C:\Windows\Microsoft.NET\Framework\v4.0.30319\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Policy not being applied to reference at this time (private, custom, partial, or location-based assembly bind).
+LOG: The same bind was seen before, and was failed with hr = 0x80070002.
+
+2015-04-05 15:53:05,955 [41] INFO  umbraco.BusinessLogic.Log - [Thread 57] Log scrubbed.  Removed all items older than 2015-02-04 15:53:05
+2015-04-05 15:54:14,068 [51] INFO  Umbraco.Core.PluginManager - [Thread 61] Determining hash of code files on disk
+2015-04-05 15:54:14,079 [51] INFO  Umbraco.Core.PluginManager - [Thread 61] Hash determined (took 7ms)
+2015-04-05 15:54:14,093 [51] INFO  Umbraco.Core.PluginManager - [Thread 61] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+2015-04-05 15:54:14,358 [51] INFO  Umbraco.Core.PluginManager - [Thread 61] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 38 (took 264ms)
+2015-04-05 15:54:14,430 [51] INFO  Umbraco.Core.PluginManager - [Thread 61] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+2015-04-05 15:54:14,437 [51] INFO  Umbraco.Core.PluginManager - [Thread 61] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 6ms)
+2015-04-05 15:54:14,437 [51] INFO  Umbraco.Core.PluginManager - [Thread 61] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+2015-04-05 15:54:14,458 [51] INFO  Umbraco.Core.PluginManager - [Thread 61] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 16 (took 20ms)
+2015-04-05 15:54:14,475 [51] INFO  Umbraco.Core.PluginManager - [Thread 61] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+2015-04-05 15:54:14,487 [51] INFO  Umbraco.Core.PluginManager - [Thread 61] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 4 (took 12ms)
+2015-04-05 15:54:14,488 [51] INFO  Umbraco.Core.PluginManager - [Thread 61] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+2015-04-05 15:54:14,504 [51] INFO  Umbraco.Core.PluginManager - [Thread 61] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 37 (took 16ms)
+2015-04-05 15:54:14,559 [51] INFO  Umbraco.Core.PluginManager - [Thread 61] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+2015-04-05 15:54:14,569 [51] INFO  Umbraco.Core.PluginManager - [Thread 61] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 9ms)
+2015-04-05 15:54:14,569 [51] INFO  Umbraco.Core.PluginManager - [Thread 61] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+2015-04-05 15:54:14,578 [51] INFO  Umbraco.Core.PluginManager - [Thread 61] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 8ms)
+2015-04-05 15:54:15,405 [51] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 61] Initializing Examine and binding to business logic events
+2015-04-05 15:54:15,484 [51] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 61] Adding examine event handlers for index providers: 3
+2015-04-05 15:54:15,746 [51] INFO  Umbraco.Web.UmbracoModule - [Thread 62] Setting OriginalRequestUrl: dev.umb.dtp.local:80/umbraco
+2015-04-05 15:54:39,092 [41] INFO  Umbraco.Core.UmbracoApplicationBase - [Thread 66] Application shutdown. Reason: BinDirChangeOrDirectoryRename
+2015-04-05 15:55:16,444 [51] INFO  umbraco.BusinessLogic.Log - [Thread 43] Log scrubbed.  Removed all items older than 2015-02-04 15:55:16
+2015-04-05 15:57:47,162 [52] INFO  Umbraco.Core.PluginManager - [Thread 69] Determining hash of code files on disk
+2015-04-05 15:57:47,174 [52] INFO  Umbraco.Core.PluginManager - [Thread 69] Hash determined (took 7ms)
+2015-04-05 15:57:47,198 [52] INFO  Umbraco.Core.PluginManager - [Thread 69] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+2015-04-05 15:57:47,539 [52] INFO  Umbraco.Core.PluginManager - [Thread 69] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 38 (took 339ms)
+2015-04-05 15:57:47,631 [52] INFO  Umbraco.Core.PluginManager - [Thread 69] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+2015-04-05 15:57:47,643 [52] INFO  Umbraco.Core.PluginManager - [Thread 69] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 12ms)
+2015-04-05 15:57:47,643 [52] INFO  Umbraco.Core.PluginManager - [Thread 69] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+2015-04-05 15:57:47,653 [52] INFO  Umbraco.Core.PluginManager - [Thread 69] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 16 (took 9ms)
+2015-04-05 15:57:47,671 [52] INFO  Umbraco.Core.PluginManager - [Thread 69] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+2015-04-05 15:57:47,679 [52] INFO  Umbraco.Core.PluginManager - [Thread 69] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 4 (took 8ms)
+2015-04-05 15:57:47,680 [52] INFO  Umbraco.Core.PluginManager - [Thread 69] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+2015-04-05 15:57:47,692 [52] INFO  Umbraco.Core.PluginManager - [Thread 69] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 37 (took 12ms)
+2015-04-05 15:57:47,819 [52] INFO  Umbraco.Core.PluginManager - [Thread 69] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+2015-04-05 15:57:47,889 [52] INFO  Umbraco.Core.PluginManager - [Thread 69] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 70ms)
+2015-04-05 15:57:47,889 [52] INFO  Umbraco.Core.PluginManager - [Thread 69] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+2015-04-05 15:57:47,898 [52] INFO  Umbraco.Core.PluginManager - [Thread 69] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 8ms)
+2015-04-05 15:57:48,660 [52] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 69] Initializing Examine and binding to business logic events
+2015-04-05 15:57:48,827 [52] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 69] Adding examine event handlers for index providers: 3
+2015-04-05 15:57:49,092 [52] INFO  Umbraco.Web.UmbracoModule - [Thread 45] Setting OriginalRequestUrl: dev.umb.dtp.local:80/umbraco
+2015-04-05 15:57:49,114 [52] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 45] An unhandled exception occurred
+System.TypeLoadException: Could not load type 'dtp.umb.scsseditor.cd.SassHandler' from assembly 'dtp.umb.scsseditor.cd'.
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-04-05 15:58:12,145 [51] INFO  Umbraco.Core.UmbracoApplicationBase - [Thread 57] Application shutdown. Reason: BinDirChangeOrDirectoryRename
+2015-04-05 15:58:59,788 [52] INFO  umbraco.BusinessLogic.Log - [Thread 55] Log scrubbed.  Removed all items older than 2015-02-04 15:58:59
+2015-04-05 16:02:05,403 [52] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 62] An unhandled exception occurred
+System.TypeLoadException: Could not load type 'dtp.umb.scsseditor.cd.SassHandler' from assembly 'dtp.umb.scsseditor.cd'.
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-04-05 16:02:21,800 [52] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 56] An unhandled exception occurred
+System.TypeLoadException: Could not load type 'dtp.umb.scsseditor.cd.SassHandler' from assembly 'dtp.umb.scsseditor.cd'.
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-04-05 16:02:24,274 [52] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 56] An unhandled exception occurred
+System.TypeLoadException: Could not load type 'dtp.umb.scsseditor.cd.SassHandler' from assembly 'dtp.umb.scsseditor.cd'.
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-04-05 16:02:25,011 [52] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 45] An unhandled exception occurred
+System.TypeLoadException: Could not load type 'dtp.umb.scsseditor.cd.SassHandler' from assembly 'dtp.umb.scsseditor.cd'.
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-04-05 16:02:25,801 [52] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 62] An unhandled exception occurred
+System.TypeLoadException: Could not load type 'dtp.umb.scsseditor.cd.SassHandler' from assembly 'dtp.umb.scsseditor.cd'.
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-04-05 16:02:35,459 [52] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 62] An unhandled exception occurred
+System.TypeLoadException: Could not load type 'dtp.umb.scsseditor.cd.SassHandler' from assembly 'dtp.umb.scsseditor.cd'.
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-04-05 16:02:36,206 [52] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 56] An unhandled exception occurred
+System.TypeLoadException: Could not load type 'dtp.umb.scsseditor.cd.SassHandler' from assembly 'dtp.umb.scsseditor.cd'.
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-04-05 16:02:36,887 [52] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 68] An unhandled exception occurred
+System.TypeLoadException: Could not load type 'dtp.umb.scsseditor.cd.SassHandler' from assembly 'dtp.umb.scsseditor.cd'.
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-04-05 16:04:53,308 [52] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 27] An unhandled exception occurred
+System.TypeLoadException: Could not load type 'dtp.umb.scsseditor.cd.SassHandler' from assembly 'dtp.umb.scsseditor.cd'.
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-04-05 16:05:04,300 [52] INFO  umbraco.content - [Thread 16] Loading content from disk cache...
+2015-04-05 16:05:04,351 [52] INFO  Umbraco.Core.PluginManager - [Thread 16] Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+2015-04-05 16:05:04,371 [52] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 23 (took 20ms)
+2015-04-05 16:05:05,875 [52] INFO  Umbraco.Core.PluginManager - [Thread 16] Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+2015-04-05 16:05:05,894 [52] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 44 (took 18ms)
+2015-04-05 16:05:07,355 [52] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 22] An unhandled exception occurred
+System.TypeLoadException: Could not load type 'dtp.umb.scsseditor.cd.SassHandler' from assembly 'dtp.umb.scsseditor.cd'.
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-04-05 16:05:17,318 [52] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 15] An unhandled exception occurred
+System.TypeLoadException: Could not load type 'dtp.umb.scsseditor.cd.SassHandler' from assembly 'dtp.umb.scsseditor.cd'.
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-04-05 16:05:59,899 [52] INFO  Umbraco.Web.Security.WebSecurity - [Thread 21] User Id: 0 logged in
+2015-04-05 16:06:00,004 [52] INFO  Umbraco.Core.PluginManager - [Thread 24] Starting resolution types of umbraco.interfaces.IApplication
+2015-04-05 16:06:00,031 [52] INFO  Umbraco.Core.PluginManager - [Thread 24] Completed resolution of types of umbraco.interfaces.IApplication, found 7 (took 27ms)
+2015-04-05 16:08:04,770 [52] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 80] An unhandled exception occurred
+System.TypeLoadException: Could not load type 'dtp.umb.scsseditor.cd.SassHandler' from assembly 'dtp.umb.scsseditor.cd'.
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-04-05 16:08:04,770 [52] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 79] An unhandled exception occurred
+System.TypeLoadException: Could not load type 'dtp.umb.scsseditor.cd.SassHandler' from assembly 'dtp.umb.scsseditor.cd'.
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-04-05 16:09:21,469 [86] INFO  Umbraco.Core.PluginManager - [Thread 61] Determining hash of code files on disk
+2015-04-05 16:09:21,481 [86] INFO  Umbraco.Core.PluginManager - [Thread 61] Hash determined (took 8ms)
+2015-04-05 16:09:21,486 [86] INFO  Umbraco.Core.PluginManager - [Thread 61] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+2015-04-05 16:09:21,512 [86] INFO  Umbraco.Core.PluginManager - [Thread 61] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 38 (took 25ms)
+2015-04-05 16:09:21,618 [86] INFO  Umbraco.Core.PluginManager - [Thread 61] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+2015-04-05 16:09:21,620 [86] INFO  Umbraco.Core.PluginManager - [Thread 61] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 1ms)
+2015-04-05 16:09:21,620 [86] INFO  Umbraco.Core.PluginManager - [Thread 61] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+2015-04-05 16:09:21,621 [86] INFO  Umbraco.Core.PluginManager - [Thread 61] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 16 (took 1ms)
+2015-04-05 16:09:21,635 [86] INFO  Umbraco.Core.PluginManager - [Thread 61] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+2015-04-05 16:09:21,636 [86] INFO  Umbraco.Core.PluginManager - [Thread 61] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 4 (took 0ms)
+2015-04-05 16:09:21,636 [86] INFO  Umbraco.Core.PluginManager - [Thread 61] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+2015-04-05 16:09:21,701 [86] INFO  Umbraco.Core.PluginManager - [Thread 61] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 37 (took 64ms)
+2015-04-05 16:09:21,750 [86] INFO  Umbraco.Core.PluginManager - [Thread 61] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+2015-04-05 16:09:21,750 [86] INFO  Umbraco.Core.PluginManager - [Thread 61] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 0ms)
+2015-04-05 16:09:21,751 [86] INFO  Umbraco.Core.PluginManager - [Thread 61] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+2015-04-05 16:09:21,751 [86] INFO  Umbraco.Core.PluginManager - [Thread 61] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 0ms)
+2015-04-05 16:09:22,727 [86] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 61] Initializing Examine and binding to business logic events
+2015-04-05 16:09:22,815 [86] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 61] Adding examine event handlers for index providers: 3
+2015-04-05 16:09:23,372 [86] INFO  Umbraco.Web.UmbracoModule - [Thread 25] Setting OriginalRequestUrl: dev.umb.dtp.local:80/umbraco
+2015-04-05 16:09:46,591 [13] INFO  Umbraco.Core.PluginManager - [Thread 61] Determining hash of code files on disk
+2015-04-05 16:09:46,604 [13] INFO  Umbraco.Core.PluginManager - [Thread 61] Hash determined (took 8ms)
+2015-04-05 16:09:46,614 [13] INFO  Umbraco.Core.PluginManager - [Thread 61] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+2015-04-05 16:09:46,631 [13] INFO  Umbraco.Core.PluginManager - [Thread 61] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 38 (took 15ms)
+2015-04-05 16:09:46,767 [13] INFO  Umbraco.Core.PluginManager - [Thread 61] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+2015-04-05 16:09:46,768 [13] INFO  Umbraco.Core.PluginManager - [Thread 61] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 1ms)
+2015-04-05 16:09:46,768 [13] INFO  Umbraco.Core.PluginManager - [Thread 61] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+2015-04-05 16:09:46,770 [13] INFO  Umbraco.Core.PluginManager - [Thread 61] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 16 (took 1ms)
+2015-04-05 16:09:46,787 [13] INFO  Umbraco.Core.PluginManager - [Thread 61] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+2015-04-05 16:09:46,788 [13] INFO  Umbraco.Core.PluginManager - [Thread 61] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 4 (took 1ms)
+2015-04-05 16:09:46,788 [13] INFO  Umbraco.Core.PluginManager - [Thread 61] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+2015-04-05 16:09:46,796 [13] INFO  Umbraco.Core.PluginManager - [Thread 61] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 37 (took 7ms)
+2015-04-05 16:09:46,840 [13] INFO  Umbraco.Core.PluginManager - [Thread 61] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+2015-04-05 16:09:46,841 [13] INFO  Umbraco.Core.PluginManager - [Thread 61] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 0ms)
+2015-04-05 16:09:46,841 [13] INFO  Umbraco.Core.PluginManager - [Thread 61] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+2015-04-05 16:09:46,842 [13] INFO  Umbraco.Core.PluginManager - [Thread 61] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 0ms)
+2015-04-05 16:09:47,640 [13] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 61] Initializing Examine and binding to business logic events
+2015-04-05 16:09:47,715 [13] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 61] Adding examine event handlers for index providers: 3
+2015-04-05 16:09:47,912 [52] INFO  Umbraco.Core.UmbracoApplicationBase - [Thread 55] Application shutdown. Reason: ConfigurationChange
+2015-04-05 16:09:48,354 [13] INFO  Umbraco.Web.UmbracoModule - [Thread 10] Setting OriginalRequestUrl: dev.umb.dtp.local:80/umbraco
+2015-04-05 16:09:56,484 [20] INFO  Umbraco.Core.PluginManager - [Thread 64] Determining hash of code files on disk
+2015-04-05 16:09:56,497 [20] INFO  Umbraco.Core.PluginManager - [Thread 64] Hash determined (took 8ms)
+2015-04-05 16:09:56,502 [20] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+2015-04-05 16:09:56,533 [20] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 38 (took 29ms)
+2015-04-05 16:09:56,646 [20] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+2015-04-05 16:09:56,648 [20] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 1ms)
+2015-04-05 16:09:56,648 [20] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+2015-04-05 16:09:56,650 [20] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 16 (took 1ms)
+2015-04-05 16:09:56,679 [20] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+2015-04-05 16:09:56,680 [20] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 4 (took 1ms)
+2015-04-05 16:09:56,681 [20] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+2015-04-05 16:09:56,798 [20] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 37 (took 116ms)
+2015-04-05 16:09:56,857 [20] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+2015-04-05 16:09:56,858 [20] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 1ms)
+2015-04-05 16:09:56,859 [20] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+2015-04-05 16:09:56,859 [20] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 0ms)
+2015-04-05 16:09:57,614 [20] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 64] Initializing Examine and binding to business logic events
+2015-04-05 16:09:57,765 [20] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 64] Adding examine event handlers for index providers: 3
+2015-04-05 16:09:57,908 [86] INFO  Umbraco.Core.UmbracoApplicationBase - [Thread 55] Application shutdown. Reason: ConfigurationChange
+2015-04-05 16:09:58,761 [20] INFO  Umbraco.Web.UmbracoModule - [Thread 7] Setting OriginalRequestUrl: dev.umb.dtp.local:80/umbraco
+2015-04-05 16:10:15,309 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Determining hash of code files on disk
+2015-04-05 16:10:15,323 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Hash determined (took 9ms)
+2015-04-05 16:10:15,343 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+2015-04-05 16:10:15,365 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 38 (took 21ms)
+2015-04-05 16:10:15,537 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+2015-04-05 16:10:15,538 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+2015-04-05 16:10:15,538 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+2015-04-05 16:10:15,539 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 16 (took 1ms)
+2015-04-05 16:10:15,556 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+2015-04-05 16:10:15,559 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 4 (took 2ms)
+2015-04-05 16:10:15,559 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+2015-04-05 16:10:15,665 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 37 (took 105ms)
+2015-04-05 16:10:15,711 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+2015-04-05 16:10:15,712 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 0ms)
+2015-04-05 16:10:15,713 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+2015-04-05 16:10:15,713 [41] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 0ms)
+2015-04-05 16:10:16,607 [41] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 64] Initializing Examine and binding to business logic events
+2015-04-05 16:10:16,816 [41] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 64] Adding examine event handlers for index providers: 3
+2015-04-05 16:10:17,333 [41] INFO  Umbraco.Web.UmbracoModule - [Thread 45] Setting OriginalRequestUrl: dev.umb.dtp.local:80/umbraco
+2015-04-05 16:10:17,430 [41] INFO  umbraco.content - [Thread 45] Loading content from disk cache...
+2015-04-05 16:10:17,566 [41] INFO  Umbraco.Core.PluginManager - [Thread 45] Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+2015-04-05 16:10:17,568 [41] INFO  Umbraco.Core.PluginManager - [Thread 45] Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 23 (took 0ms)
+2015-04-05 16:10:18,480 [13] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner`1[[Umbraco.Web.Scheduling.LogScrubber, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null]] - [Thread 11] Application is shutting down immediately
+2015-04-05 16:10:18,480 [13] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner`1[[Umbraco.Web.Scheduling.ScheduledPublishing, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null]] - [Thread 11] Application is shutting down immediately
+2015-04-05 16:10:18,480 [13] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner`1[[Umbraco.Web.Scheduling.ScheduledTasks, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null]] - [Thread 11] Application is shutting down immediately
+2015-04-05 16:10:18,484 [13] INFO  Umbraco.Core.UmbracoApplicationBase - [Thread 70] Application shutdown. Reason: ConfigurationChange
+2015-04-05 16:10:20,388 [41] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 83] An unhandled exception occurred
+System.TypeLoadException: Could not load type 'dtp.umb.scsseditor.cd.SassHandler' from assembly 'dtp.umb.scsseditor.cd'.
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-04-05 16:10:20,528 [41] INFO  Umbraco.Core.PluginManager - [Thread 45] Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+2015-04-05 16:10:20,529 [41] INFO  Umbraco.Core.PluginManager - [Thread 45] Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 44 (took 1ms)
+2015-04-05 16:10:41,490 [20] INFO  Umbraco.Core.UmbracoApplicationBase - [Thread 7] Application shutdown. Reason: ConfigurationChange
+2015-04-05 16:10:58,436 [41] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 83] An unhandled exception occurred
+System.TypeLoadException: Could not load type 'dtp.umb.scsseditor.cd.SassHandler' from assembly 'dtp.umb.scsseditor.cd'.
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-04-05 16:11:25,679 [41] INFO  umbraco.BusinessLogic.Log - [Thread 83] Log scrubbed.  Removed all items older than 2015-02-04 16:11:25
+2015-04-05 16:11:36,022 [75] INFO  Umbraco.Core.PluginManager - [Thread 64] Determining hash of code files on disk
+2015-04-05 16:11:36,034 [75] INFO  Umbraco.Core.PluginManager - [Thread 64] Hash determined (took 7ms)
+2015-04-05 16:11:36,080 [75] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+2015-04-05 16:11:36,475 [75] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 38 (took 393ms)
+2015-04-05 16:11:36,547 [75] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+2015-04-05 16:11:36,555 [75] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 8ms)
+2015-04-05 16:11:36,555 [75] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+2015-04-05 16:11:36,580 [75] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 16 (took 24ms)
+2015-04-05 16:11:36,595 [75] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+2015-04-05 16:11:36,682 [75] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 4 (took 86ms)
+2015-04-05 16:11:36,682 [75] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+2015-04-05 16:11:36,705 [75] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 37 (took 23ms)
+2015-04-05 16:11:36,755 [75] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+2015-04-05 16:11:36,784 [75] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 29ms)
+2015-04-05 16:11:36,785 [75] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+2015-04-05 16:11:36,803 [75] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 18ms)
+2015-04-05 16:11:37,500 [75] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 64] Initializing Examine and binding to business logic events
+2015-04-05 16:11:37,588 [75] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 64] Adding examine event handlers for index providers: 3
+2015-04-05 16:11:37,905 [75] INFO  Umbraco.Web.UmbracoModule - [Thread 14] Setting OriginalRequestUrl: dev.umb.dtp.local:80/umbraco
+2015-04-05 16:11:56,757 [41] INFO  Umbraco.Core.UmbracoApplicationBase - [Thread 7] Application shutdown. Reason: BinDirChangeOrDirectoryRename
+2015-04-05 16:12:38,643 [75] INFO  umbraco.BusinessLogic.Log - [Thread 72] Log scrubbed.  Removed all items older than 2015-02-04 16:12:38
+2015-04-05 16:16:42,204 [75] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 83] An unhandled exception occurred
+System.TypeLoadException: Could not load type 'dtp.umb.scsseditor.cd.SassHandler' from assembly 'dtp.umb.scsseditor.cd'.
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-04-05 16:16:59,804 [75] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 16] An unhandled exception occurred
+System.TypeLoadException: Could not load type 'dtp.umb.scsseditor.cd.SassHandler' from assembly 'dtp.umb.scsseditor.cd'.
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-04-05 16:21:11,291 [75] INFO  Umbraco.Core.UmbracoApplicationBase - [Thread 71] Application shutdown. Reason: ConfigurationChange
+2015-04-05 16:21:11,740 [30] INFO  Umbraco.Core.PluginManager - [Thread 64] Determining hash of code files on disk
+2015-04-05 16:21:11,751 [30] INFO  Umbraco.Core.PluginManager - [Thread 64] Hash determined (took 6ms)
+2015-04-05 16:21:11,758 [30] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+2015-04-05 16:21:11,789 [30] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 38 (took 29ms)
+2015-04-05 16:21:11,868 [30] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+2015-04-05 16:21:11,869 [30] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+2015-04-05 16:21:11,869 [30] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+2015-04-05 16:21:11,870 [30] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 16 (took 0ms)
+2015-04-05 16:21:11,887 [30] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+2015-04-05 16:21:11,888 [30] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 4 (took 0ms)
+2015-04-05 16:21:11,888 [30] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+2015-04-05 16:21:11,891 [30] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 37 (took 3ms)
+2015-04-05 16:21:11,921 [30] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+2015-04-05 16:21:11,921 [30] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 0ms)
+2015-04-05 16:21:11,922 [30] INFO  Umbraco.Core.PluginManager - [Thread 64] Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+2015-04-05 16:21:11,922 [30] INFO  Umbraco.Core.PluginManager - [Thread 64] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 0ms)
+2015-04-05 16:21:12,531 [30] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 64] Initializing Examine and binding to business logic events
+2015-04-05 16:21:12,678 [30] INFO  Umbraco.Web.Search.ExamineEvents - [Thread 64] Adding examine event handlers for index providers: 3
+2015-04-05 16:21:13,087 [30] INFO  Umbraco.Web.UmbracoModule - [Thread 16] Setting OriginalRequestUrl: dev.umb.dtp.local:80/umbraco
+2015-04-05 16:22:13,979 [30] INFO  umbraco.BusinessLogic.Log - [Thread 71] Log scrubbed.  Removed all items older than 2015-02-04 16:22:13
+2015-04-05 16:29:14,140 [30] ERROR Umbraco.Core.UmbracoApplicationBase - [Thread 72] An unhandled exception occurred
+System.TypeLoadException: Could not load type 'dtp.umb.scsseditor.cd.SassHandler' from assembly 'dtp.umb.scsseditor.cd'.
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Configuration.HandlerFactoryCache.GetTypeWithAssert(String type)
+   at System.Web.Configuration.HandlerFactoryCache.GetHandlerType(String type)
+   at System.Web.Configuration.HandlerFactoryCache..ctor(String type)
+   at System.Web.HttpApplication.GetFactory(String type)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-04-05 16:31:04,947 [30] INFO  Umbraco.Core.UmbracoApplicationBase - [Thread 72] Application shutdown. Reason: ConfigurationChange
