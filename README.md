@@ -1,16 +1,16 @@
 ##Umbraco 7 Backoffice SCSS Editor
 
-Once you go SCSS (http://sass-lang.com/) it is had to go back! This simple back office extension adds a SCSS file editor and ClientDependency compiler to our favorite CMS.
+Once you go SCSS (http://sass-lang.com/) it is hard to go back! This simple back office extension adds a SCSS file editor and ClientDependency compiler to our favorite CMS.
 
-Download: https://our.umbraco.org/projects/backoffice-extensions/backoffice-scss-editor
+Umbraco Package Download: https://our.umbraco.org/projects/backoffice-extensions/backoffice-scss-editor
 
 <br />
 **To install:**<br />
-Download package and install via the Umbraco back office, then add the below httpHandler reference into your web.config under the node:
+Download package and install via the Umbraco back office, then add the below httpHandler reference into your web.config under the <httpHandlers> node:
 ```
 <add path="*.scss" verb="GET" type="dtp.umb.scsseditor.cd.SassHandler, dtp.umb.scsseditor.cd" />
 ```
-Also add this handler under the node:
+Also add this handler under the <system.webServer><handlers> node:
 
 ```
 <remove name="DtpScssHandler" />
@@ -44,4 +44,10 @@ Don't forget to add the output helper where you want the compiled SCSS to render
 @Html.RenderCssHere();  
 ```
 
+If you are making changes to your SCSS files and not seeing any change in your site it could be because of SCSS error or the Client Dependency Framework cachingd. Try turning on debugging in the web.config. 
+
+```
+<compilation defaultLanguage="c#" debug="true" batch="false" targetFramework="4.5" /> 
+```
+<br />
 **Note:** See Client Dependency (CD) GitHub for CD documentation: https://github.com/Shazwazza/ClientDependency
