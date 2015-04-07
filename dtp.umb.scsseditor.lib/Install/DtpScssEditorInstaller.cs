@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Configuration;
+using System.Xml;
 using umbraco;
 
 namespace dtp.umb.scsseditor.lib.Install
@@ -16,7 +17,7 @@ namespace dtp.umb.scsseditor.lib.Install
         #region Constants
 
         private const string APP_VERSION_KEY = "dtpScssEditor:Version";
-        private const double APP_VERSION = 0.01;
+        private const double APP_VERSION = 0.1;
 
         private const string APP_ROOT_KEY = "dtpScssEditor:Root";
         private const string APP_ROOT = "~/scss/";
@@ -39,6 +40,16 @@ namespace dtp.umb.scsseditor.lib.Install
                 AddUpdateAppSettings(APP_VERSION_KEY, APP_VERSION.ToString());
                 AddUpdateAppSettings(APP_ROOT_KEY, APP_ROOT);
                 AddUpdateAppSettings(APP_DELETE_EMPTY_DIRECTORY_KEY, APP_DELETE_EMPTY_DIRECTORY_KEY);
+
+                var cdConfigPath = HttpContext.Current.Server.MapPath(@"~/Config/ClientDependency.config");
+
+                XmlDocument cdConfig = new XmlDocument();
+                cdConfig.Load(cdConfigPath);
+
+                XmlNode clientDependencyNode = cdConfig.SelectSingleNode("clientDependency");
+                clientDependencyNode.Attributes["version"].Value = "0";
+
+                cdConfig.Save(cdConfigPath);
             }
         }
 

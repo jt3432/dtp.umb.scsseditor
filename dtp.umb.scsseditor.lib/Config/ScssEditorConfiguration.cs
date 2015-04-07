@@ -4,25 +4,15 @@ using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web.Configuration;
+using System.Configuration;
 
 namespace dtp.umb.scsseditor.lib.Config
 {
-    static public class ScssEditorConfiguration
+    public class ScssEditorConfiguration : ConfigurationSection
     {
-
-        static void GetSetting(string key)
+        public ScssEditorConfiguration()
         {
-
-            //ExeConfigurationFileMap configFileMap = new ExeConfigurationFileMap();
-            //configFileMap.ExeConfigFilename = roamingConfig.FilePath;
-
-            //// Get the mapped configuration file.
-            //Configuration config =
-            //  ConfigurationManager.OpenMappedExeConfiguration(
-            //    configFileMap, ConfigurationUserLevel.None);
-
-            //return "";
+            //for future custom config file for editor.
         }
     }
 }
