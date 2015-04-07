@@ -14,6 +14,7 @@ using Umbraco.Web.Mvc;
 using Umbraco.Web.WebApi.Filters;
 using Umbraco.Core.Persistence;
 using Umbraco.Core;
+using ClientDependency.Core;
 
 namespace dtp.umb.scsseditor.Controllers
 {
@@ -178,9 +179,12 @@ namespace dtp.umb.scsseditor.Controllers
             
             var path = Path.Combine(_rootScssPath, scssFile.PathRelative);
             try
-            {                
-                System.IO.File.WriteAllText(path, scssFile.Content);                
-            } 
+            {
+                System.IO.File.WriteAllText(path, scssFile.Content);
+
+                ClientDependency.Core.Config.ClientDependencySection cdConfig = new ClientDependency.Core.Config.ClientDependencySection();
+                cdConfig.Version += 1;
+            }
             catch
             {
                 success = false;
