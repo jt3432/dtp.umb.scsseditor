@@ -237,6 +237,8 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="App_Plugins\DtpScssEditor\backoffice\dtpScssEditorTree\create.html" />
     <Content Include="App_Plugins\DtpScssEditor\backoffice\dtpScssEditorTree\delete.html" />
+    <Content Include="App_Plugins\DtpScssEditor\backoffice\views\dialogVariables.html" />
+    <Content Include="App_Plugins\DtpScssEditor\backoffice\views\dialogImports.html" />
     <Content Include="App_Plugins\DtpScssEditor\backoffice\dtpScssEditorTree\edit.html" />
     <Content Include="App_Plugins\DtpScssEditor\backoffice\dtpScssEditorTree\ng\createController.js" />
     <Content Include="App_Plugins\DtpScssEditor\backoffice\dtpScssEditorTree\ng\deleteController.js" />
@@ -246,6 +248,7 @@
     <Content Include="App_Plugins\DtpScssEditor\resources\codemirror.css" />
     <Content Include="App_Plugins\DtpScssEditor\resources\codemirror.js" />
     <Content Include="App_Plugins\DtpScssEditor\resources\css.js" />
+    <Content Include="App_Plugins\DtpScssEditor\resources\dtpscsseditor.css" />
     <Content Include="App_Plugins\Grid\Config\FanoeConfig.txt" />
     <Content Include="App_Plugins\Grid\Editors\Views\media_with_description.html" />
     <Content Include="App_Plugins\Grid\Editors\Views\quote_with_description.html" />

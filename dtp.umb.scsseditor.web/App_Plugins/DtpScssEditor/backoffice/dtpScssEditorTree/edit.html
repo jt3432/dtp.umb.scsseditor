@@ -26,6 +26,12 @@
             <umb-tab id="tab1" rel="scss">
 
                 <div class="umb-pane pane">
+                    <div class="btn-toolbar dtp-btn-toolbar">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default" title="Insert an import statement" ng-click="openDialog('Imports')">@</button>
+                            <button type="button" class="btn btn-default" title="Insert a variable" ng-click="openDialog('Variables')">$</button>
+                        </div>
+                    </div>
                     <div style="border: solid 1px #ddd">
                         <textarea dtpng-codemirror ng-model="scssFile"></textarea>
                     </div>

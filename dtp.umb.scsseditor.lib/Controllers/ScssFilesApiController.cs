@@ -185,18 +185,22 @@ namespace dtp.umb.scsseditor.Controllers
             {
                 System.IO.File.WriteAllText(path, scssFile.Content);
 
-                ClientDependencySection cdSection = (ClientDependencySection)ConfigurationManager.GetSection("clientDependency");
-                var version = cdSection.Version;
+                CompilationSection compilationSection = (CompilationSection)System.Configuration.ConfigurationManager.GetSection(@"system.web/compilation");
+                if (!compilationSection.Debug)
+                {
+                    ClientDependencySection cdSection = (ClientDependencySection)ConfigurationManager.GetSection(@"clientDependency");
+                    var version = cdSection.Version;
 
-                var cdConfigPath = HttpContext.Current.Server.MapPath(@"~/Config/ClientDependency.config");
+                    var cdConfigPath = HttpContext.Current.Server.MapPath(@"~/Config/ClientDependency.config");
 
-                XmlDocument cdConfig = new XmlDocument();
-                cdConfig.Load(cdConfigPath);
+                    XmlDocument cdConfig = new XmlDocument();
+                    cdConfig.Load(cdConfigPath);
 
-                XmlNode clientDependencyNode = cdConfig.SelectSingleNode("clientDependency");
-                clientDependencyNode.Attributes["version"].Value = String.Format("{0}", version + 1);
+                    XmlNode clientDependencyNode = cdConfig.SelectSingleNode(@"clientDependency");
+                    clientDependencyNode.Attributes["version"].Value = String.Format("{0}", version + 1);
 
-                cdConfig.Save(cdConfigPath);
+                    cdConfig.Save(cdConfigPath);
+                }
                 
             }
             catch

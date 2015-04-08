@@ -2,7 +2,6 @@
 javascript: [
 	'~/App_Plugins/DtpScssEditor/resources/codemirror.js',
 	'~/App_Plugins/DtpScssEditor/resources/css.js',
-	'~/App_Plugins/DtpScssEditor/backOffice/DtpScssEditorTree/ng/ui-codemirror.js',
 	'~/App_Plugins/DtpScssEditor/backOffice/DtpScssEditorTree/ng/codemirrorDirective.js',
 	'~/App_Plugins/DtpScssEditor/backOffice/DtpScssEditorTree/ng/deleteController.js',
 	'~/App_Plugins/DtpScssEditor/backOffice/DtpScssEditorTree/ng/createController.js',
@@ -10,6 +9,7 @@ javascript: [
 	'~/App_Plugins/DtpScssEditor/dtpScssEditorResource.js',
 ],
 css: [
-	'~/App_Plugins/DtpScssEditor/resources/codemirror.css'
+	'~/App_Plugins/DtpScssEditor/resources/codemirror.css',
+	'~/App_Plugins/DtpScssEditor/resources/dtpscsseditor.css'
 ]
 }
