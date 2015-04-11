@@ -237,6 +237,8 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="App_Plugins\DtpScssEditor\backoffice\dtpScssEditorTree\create.html" />
     <Content Include="App_Plugins\DtpScssEditor\backoffice\dtpScssEditorTree\delete.html" />
+    <Content Include="App_Plugins\DtpScssEditor\backoffice\views\dialogVariables.html" />
+    <Content Include="App_Plugins\DtpScssEditor\backoffice\views\dialogImports.html" />
     <Content Include="App_Plugins\DtpScssEditor\backoffice\dtpScssEditorTree\edit.html" />
     <Content Include="App_Plugins\DtpScssEditor\backoffice\dtpScssEditorTree\ng\createController.js" />
     <Content Include="App_Plugins\DtpScssEditor\backoffice\dtpScssEditorTree\ng\deleteController.js" />
@@ -246,12 +248,22 @@
     <Content Include="App_Plugins\DtpScssEditor\resources\codemirror.css" />
     <Content Include="App_Plugins\DtpScssEditor\resources\codemirror.js" />
     <Content Include="App_Plugins\DtpScssEditor\resources\css.js" />
+    <Content Include="App_Plugins\DtpScssEditor\resources\dtpscsseditor.css" />
     <Content Include="App_Plugins\Grid\Config\FanoeConfig.txt" />
     <Content Include="App_Plugins\Grid\Editors\Views\media_with_description.html" />
     <Content Include="App_Plugins\Grid\Editors\Views\quote_with_description.html" />
     <Content Include="Config\grid.editors.config.js" />
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Views\Partials\Grid\Bootstrap2.cshtml" />
+    <Content Include="Views\Partials\Grid\Bootstrap3.cshtml" />
+    <Content Include="Views\Partials\Grid\Editors\Base.cshtml" />
+    <Content Include="Views\Partials\Grid\Editors\Embed.cshtml" />
+    <Content Include="Views\Partials\Grid\Editors\Macro.cshtml" />
+    <Content Include="Views\Partials\Grid\Editors\Media.cshtml" />
+    <Content Include="Views\Partials\Grid\Editors\Rte.cshtml" />
+    <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
+    <Content Include="Views\Web.config" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -259,24 +271,15 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\MacroPartials\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Partials\Grid\Editors\Embed.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Partials\Grid\Bootstrap3.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Partials\Grid\Bootstrap2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Config\trees.config" />
@@ -300,21 +303,6 @@
     <Content Include="App_Plugins\Grid\Editors\Render\media_text_right.cshtml" />
     <Content Include="App_Plugins\Grid\Editors\Render\media_wide.cshtml" />
     <Content Include="App_Plugins\Grid\Editors\Render\quote_with_description.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Partials\Grid\Editors\Rte.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Partials\Grid\Editors\Media.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Partials\Grid\Editors\Macro.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Partials\Grid\Editors\Base.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Config\UrlRewriting.config" />
@@ -363,6 +351,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Plugins\DtpScssEditor\package.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BlogOverview.cshtml" />
+    <Content Include="Views\BlogPost.cshtml" />
+    <Content Include="Views\Home.cshtml" />
+    <Content Include="Views\Master.cshtml" />
+    <Content Include="Views\Partials\BottomNavigation.cshtml" />
+    <Content Include="Views\Partials\Grid\Fanoe.cshtml" />
+    <Content Include="Views\Partials\MainNavigation.cshtml" />
+    <Content Include="Views\TextPage.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\DtpScssEditor.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

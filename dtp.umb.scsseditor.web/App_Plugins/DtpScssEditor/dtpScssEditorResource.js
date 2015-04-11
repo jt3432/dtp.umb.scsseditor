@@ -36,7 +36,7 @@
                     }
 	            }
 
-	            $log.debug('Tree Path: ', navPath);
+	            //$log.debug('Tree Path: ', navPath);
 	            return navPath;
 	        }
 	    };

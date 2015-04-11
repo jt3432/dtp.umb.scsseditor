@@ -14,6 +14,10 @@ using Umbraco.Web.Mvc;
 using Umbraco.Web.WebApi.Filters;
 using Umbraco.Core.Persistence;
 using Umbraco.Core;
+using ClientDependency.Core;
+using ClientDependency.Core.Config;
+using System.Configuration;
+using System.Xml;
 
 namespace dtp.umb.scsseditor.Controllers
 {
@@ -178,9 +182,27 @@ namespace dtp.umb.scsseditor.Controllers
             
             var path = Path.Combine(_rootScssPath, scssFile.PathRelative);
             try
-            {                
-                System.IO.File.WriteAllText(path, scssFile.Content);                
-            } 
+            {
+                System.IO.File.WriteAllText(path, scssFile.Content);
+
+                CompilationSection compilationSection = (CompilationSection)System.Configuration.ConfigurationManager.GetSection(@"system.web/compilation");
+                if (!compilationSection.Debug)
+                {
+                    ClientDependencySection cdSection = (ClientDependencySection)ConfigurationManager.GetSection(@"clientDependency");
+                    var version = cdSection.Version;
+
+                    var cdConfigPath = HttpContext.Current.Server.MapPath(@"~/Config/ClientDependency.config");
+
+                    XmlDocument cdConfig = new XmlDocument();
+                    cdConfig.Load(cdConfigPath);
+
+                    XmlNode clientDependencyNode = cdConfig.SelectSingleNode(@"clientDependency");
+                    clientDependencyNode.Attributes["version"].Value = String.Format("{0}", version + 1);
+
+                    cdConfig.Save(cdConfigPath);
+                }
+                
+            }
             catch
             {
                 success = false;

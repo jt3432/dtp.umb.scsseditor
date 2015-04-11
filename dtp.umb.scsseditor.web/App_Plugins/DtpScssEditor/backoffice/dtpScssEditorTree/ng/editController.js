@@ -85,4 +85,20 @@
             
         };
 
+        $scope.openDialog = function (dialogType) {
+
+            var dialog = dialogService.open({
+                template: '/App_Plugins/DtpScssEditor/backoffice/views/dialog' + dialogType + '.html', show: true, callback: function () {
+                    $log.info('Dialog' + dialogType + ' opened!');
+                }
+            });
+            
+        };
+
+        $scope.closeDialog = function ($event) {
+            $event.preventDefault();
+            dialogService.closeAll();
+            return false;
+        }
+
 	});
