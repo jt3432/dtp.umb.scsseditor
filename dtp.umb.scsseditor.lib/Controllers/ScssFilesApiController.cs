@@ -215,5 +215,40 @@ namespace dtp.umb.scsseditor.Controllers
 
             return success;
         }
+
+        [System.Web.Http.AcceptVerbs("GET", "POST")]
+        [System.Web.Http.HttpGet]
+        public IEnumerable<object> GetVariables()
+        {
+            List<object> variables = new List<object>();
+
+            var files = Directory.GetFiles(_rootScssPath, "_variables.scss", SearchOption.AllDirectories);
+
+            if (files.Count() > 0)
+            {
+                var lines = System.IO.File.ReadLines(files[0]);
+                string groupName = string.Empty;
+                foreach(string line in lines)
+                {
+                    if(line.StartsWith("$"))
+                    {
+                        variables.Add(new { 
+                            name = line.Substring(0, line.IndexOf(':')), 
+                            group = groupName 
+                        });
+                    }
+                    else if (line.StartsWith(@"/*"))
+                    {
+                        groupName = line.TrimStart(@"/*").TrimEnd(@"*/").Trim();
+                    }
+                    else if(String.IsNullOrEmpty(line.Trim()))
+                    {
+                        groupName = string.Empty;
+                    }
+                }
+            }
+
+            return variables;
+        }
     }
 }

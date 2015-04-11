@@ -1,8 +1,14 @@
 ﻿angular.module('umbraco')
-.controller('DtpScssEditor.ScssEditorEditController', 
+.controller('DtpScssEditor.ScssEditorEditController',
     function ($scope, $routeParams, $timeout, $log, $q, $location, dtpScssEditorResource, dtpScssEditorFile, formHelper, contentEditingHelper, notificationsService, navigationService, dialogService, entityResource, treeService) {
 
-        $scope.tabs = [{ id: 1, label: 'SCSS' }, { id: 2, label: 'Properties' }];        
+        $scope.tabs = [{ id: 1, label: 'SCSS' }, { id: 2, label: 'Properties' }];
+
+        dtpScssEditorResource.getVariables().then(function (response) {
+            if (response.data) {
+                $scope.variables = response.data;
+            }
+        });
 
         dtpScssEditorResource.getFile($routeParams.id).then(function (response) {
             //$log.debug('getFile response: ', response);
@@ -24,7 +30,7 @@
 
             var deferred = $q.defer();
 
-            if (formHelper.submitForm({ scope: $scope, statusMessage: 'Saving...' })) {                
+            if (formHelper.submitForm({ scope: $scope, statusMessage: 'Saving...' })) {
 
                 var scssFile = {
                     content: dtpScssEditorFile.scss,
@@ -82,7 +88,7 @@
             }
 
             return deferred.promise;
-            
+
         };
 
         $scope.openDialog = function (dialogType) {
@@ -92,7 +98,7 @@
                     $log.info('Dialog' + dialogType + ' opened!');
                 }
             });
-            
+
         };
 
         $scope.closeDialog = function ($event) {
@@ -101,4 +107,11 @@
             return false;
         }
 
-	});
+        $scope.insertVariable = function () {
+            if ($scope.selectedVariable !== undefined && $scope.selectedVariable !== '') {
+                $scope.scssFile.editor.replaceSelection($scope.selectedVariable);
+                dialogService.closeAll();
+            }
+        };
+
+    });

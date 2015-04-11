@@ -13,6 +13,9 @@
 	        saveFile: function (scssFile) {
 	            return $http.post('backoffice/DtpScssEditor/ScssFilesApi/SaveFile', scssFile);
 	        },
+	        getVariables: function () {
+	            return $http.get('backoffice/DtpScssEditor/ScssFilesApi/GetVariables');
+	        },
 	        buildTreePath: function (currentNodeId) {
 
 	            var fileExt = '';
@@ -56,6 +59,7 @@ angular.module("umbraco.resources")
 	            this.absolutePath = '';
 	            this.rootPath = '';
 	            this.scss = '';
-	        }
+	        },
+            editor: null
 	    };
 	});
