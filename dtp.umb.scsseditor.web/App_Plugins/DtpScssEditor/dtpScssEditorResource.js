@@ -16,6 +16,9 @@
 	        getVariables: function () {
 	            return $http.get('backoffice/DtpScssEditor/ScssFilesApi/GetVariables');
 	        },
+	        getMixins: function () {
+	            return $http.get('backoffice/DtpScssEditor/ScssFilesApi/GetMixins');
+	        },
 	        buildTreePath: function (currentNodeId) {
 
 	            var fileExt = '';

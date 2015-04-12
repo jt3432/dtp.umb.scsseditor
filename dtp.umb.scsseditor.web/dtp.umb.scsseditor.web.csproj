@@ -237,6 +237,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="App_Plugins\DtpScssEditor\backoffice\dtpScssEditorTree\create.html" />
     <Content Include="App_Plugins\DtpScssEditor\backoffice\dtpScssEditorTree\delete.html" />
+    <Content Include="App_Plugins\DtpScssEditor\backoffice\views\dialogMixins.html" />
     <Content Include="App_Plugins\DtpScssEditor\backoffice\views\dialogVariables.html" />
     <Content Include="App_Plugins\DtpScssEditor\backoffice\views\dialogImports.html" />
     <Content Include="App_Plugins\DtpScssEditor\backoffice\dtpScssEditorTree\edit.html" />

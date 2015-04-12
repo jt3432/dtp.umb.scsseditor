@@ -2,7 +2,41 @@
 .controller('DtpScssEditor.ScssEditorEditController',
     function ($scope, $routeParams, $timeout, $log, $q, $location, dtpScssEditorResource, dtpScssEditorFile, formHelper, contentEditingHelper, notificationsService, navigationService, dialogService, entityResource, treeService) {
 
+        $scope.dialogTreeEventHandler = $({});
+
+        $scope.dialogTreeEventHandler.bind("treeNodeSelect", function (event, args) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            var _selectedNode = args.node;
+            var _treeRootElement = $(args.element).closest(".umb-tree");
+
+            // Clear previously selected items (remove if you want to select multiple)
+            // iterate through each child element in the current tree
+            _treeRootElement.find("li[node='child']").each(function () {
+                $(this).scope().currentNode = null;
+            })
+
+            var fileExt = '.scss';
+            if (args.node.name.indexOf(fileExt, args.node.name - fileExt.length) !== -1) {
+                // this will highlight the current node
+                $(args.element).scope().currentNode = _selectedNode;
+                $scope.importStatement = '@import \'' + args.node.id.replace(/\\/g, '/') + '\';';
+            } else {
+                $scope.importStatement = undefined;
+            }
+
+        });
+
         $scope.tabs = [{ id: 1, label: 'SCSS' }, { id: 2, label: 'Properties' }];
+
+        if ($scope.mixins === undefined) {
+            dtpScssEditorResource.getMixins().then(function (response) {
+                if (response.data) {
+                    $scope.mixins = response.data;
+                }
+            });
+        }
 
         dtpScssEditorResource.getVariables().then(function (response) {
             if (response.data) {
@@ -95,7 +129,7 @@
 
             var dialog = dialogService.open({
                 template: '/App_Plugins/DtpScssEditor/backoffice/views/dialog' + dialogType + '.html', show: true, callback: function () {
-                    $log.info('Dialog' + dialogType + ' opened!');
+                    //$log.info('Dialog' + dialogType + ' opened!');
                 }
             });
 
@@ -107,11 +141,47 @@
             return false;
         }
 
-        $scope.insertVariable = function () {
-            if ($scope.selectedVariable !== undefined && $scope.selectedVariable !== '') {
-                $scope.scssFile.editor.replaceSelection($scope.selectedVariable);
+        $scope.insertImport = function () {
+            if ($scope.importStatement !== undefined && $scope.importStatement !== '') {                
+                $scope.scssFile.editor.replaceSelection($scope.importStatement);
+                $scope.scssFile.editor.focus();
                 dialogService.closeAll();
             }
         };
+
+        $scope.insertMixin = function () {
+            if ($scope.selectedMixin !== undefined && $scope.selectedMixin !== '') {
+                var mixin = $scope.selectedMixin.Mixin.replace('{ }', '{\n\t\t\n\t}');
+
+                $.each($scope.selectedMixin.Variables, function (idx, variable) {
+                    if (variable.Value === '' && variable.Key.indexOf(':') > -1)
+                    {
+                        var defaultValue = variable.Key.split(':');
+                        variable.Value = defaultValue[1];
+                    } else if (variable.Value === '') {
+                        variable.Value = '\'\'';
+                    }
+                    //var re = new RegExp('\\' + variable.Key, 'g');
+                    mixin = mixin.replace(variable.Key, variable.Value);
+                });
+
+                $scope.scssFile.editor.replaceSelection('@include ' + mixin);
+                $scope.scssFile.editor.focus();
+                dialogService.closeAll();
+            }
+        };
+
+        $scope.insertVariable = function () {
+            if ($scope.selectedVariable !== undefined && $scope.selectedVariable !== '') {
+                $scope.scssFile.editor.replaceSelection($scope.selectedVariable.name);
+                $scope.scssFile.editor.focus();
+                dialogService.closeAll();
+            }
+        };
+
+        $scope.addComment = function () {
+            $scope.scssFile.editor.replaceSelection('/* ' + $scope.scssFile.editor.getSelection() + ' */');
+            $scope.scssFile.editor.focus();
+        }
 
     });

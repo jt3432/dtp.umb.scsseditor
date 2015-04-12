@@ -194,6 +194,7 @@
     <Compile Include="Events\RegisterEvents.cs" />
     <Compile Include="Install\DtpScssEditorInstaller.cs" />
     <Compile Include="Models\IScssEntity.cs" />
+    <Compile Include="Models\MixinModel.cs" />
     <Compile Include="Models\ScssDirectory.cs" />
     <Compile Include="Models\SassFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

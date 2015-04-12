@@ -18,6 +18,8 @@ using ClientDependency.Core;
 using ClientDependency.Core.Config;
 using System.Configuration;
 using System.Xml;
+using dtp.umb.scsseditor.lib.Models;
+using System.Text.RegularExpressions;
 
 namespace dtp.umb.scsseditor.Controllers
 {
@@ -218,6 +220,62 @@ namespace dtp.umb.scsseditor.Controllers
 
         [System.Web.Http.AcceptVerbs("GET", "POST")]
         [System.Web.Http.HttpGet]
+        public IEnumerable<MixinModel> GetMixins()
+        {
+            List<MixinModel> mixins = new List<MixinModel>();
+
+            var files = Directory.GetFiles(_rootScssPath, "_mixins.scss", SearchOption.AllDirectories);
+
+            if (files.Count() > 0)
+            {
+                var lines = System.IO.File.ReadLines(files[0]);
+                string groupName = string.Empty;
+                foreach (string line in lines)
+                {
+                    if (line.TrimStart().StartsWith(@"@mixin"))
+                    {
+                        var mixin = line.Substring(0, line.IndexOf('{')).TrimStart("@mixin").Trim();
+                        var variables = new List<KeyValuePair<string, string>>();
+
+                        Match variablesMatch = Regex.Match(mixin, @"(\(.+\))");
+
+                        if (!String.IsNullOrEmpty(variablesMatch.Value))
+                        {
+
+                            variables = variablesMatch.Value.Trim()
+                                .TrimStart("(")
+                                .TrimEnd(")")
+                                .Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries)
+                                .Select(v => v.Trim())
+                                .ToDictionary(v => v, v => String.Empty).ToList();
+                        }
+
+                        mixins.Add(new MixinModel()
+                        {
+                            Mixin = mixin,
+                            Group = "",
+                            Variables = variables
+                        });
+                    }
+                    else if (line.TrimStart().StartsWith(@"@content"))
+                    {
+                        if (mixins.Count() > 0 && !mixins.Last().Mixin.EndsWith("}"))
+                        {
+                            mixins.Last().Mixin += @" { }";
+                        }
+                    }
+                    //else if (String.IsNullOrEmpty(line.Trim()))
+                    //{
+                    //    groupName = string.Empty;
+                    //}
+                }
+            }
+
+            return mixins;
+        }
+
+        [System.Web.Http.AcceptVerbs("GET", "POST")]
+        [System.Web.Http.HttpGet]
         public IEnumerable<object> GetVariables()
         {
             List<object> variables = new List<object>();
@@ -230,14 +288,14 @@ namespace dtp.umb.scsseditor.Controllers
                 string groupName = string.Empty;
                 foreach(string line in lines)
                 {
-                    if(line.StartsWith("$"))
+                    if (line.TrimStart().StartsWith(@"$"))
                     {
                         variables.Add(new { 
                             name = line.Substring(0, line.IndexOf(':')), 
                             group = groupName 
                         });
                     }
-                    else if (line.StartsWith(@"/*"))
+                    else if (line.TrimStart().StartsWith(@"/*"))
                     {
                         groupName = line.TrimStart(@"/*").TrimEnd(@"*/").Trim();
                     }
