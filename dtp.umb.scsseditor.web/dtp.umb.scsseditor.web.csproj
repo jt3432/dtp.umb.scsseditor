@@ -366,6 +366,12 @@
   <ItemGroup>
     <Content Include="Config\DtpScssEditor.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="scss\main.scss" />
+    <Content Include="scss\modules\_mixins.scss" />
+    <Content Include="scss\modules\_pages.scss" />
+    <Content Include="scss\modules\_variables.scss" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
