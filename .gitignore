@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/dtp.umb.scsseditor.web/App_Data
+/dtp.umb.scsseditor.web/obj/Release/dtp.umb.scsseditor.web.csproj.FileListAbsolute.txt
