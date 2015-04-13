@@ -239,3 +239,4 @@ C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.cd\bin\Debug\umbraco.Macro
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.cd\bin\Debug\umbraco.providers.xml
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.cd\obj\Debug\dtp.umb.scsseditor.cd.dll
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.cd\obj\Debug\dtp.umb.scsseditor.cd.pdb
+C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.cd\obj\Debug\dtp.umb.scsseditor.cd.csprojResolveAssemblyReference.cache

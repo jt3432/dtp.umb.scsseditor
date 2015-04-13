@@ -73,8 +73,6 @@ D:\Clients Files\Duct Tape Programming\Projects\Umbraco Customizations\dtp.umb.s
 D:\Clients Files\Duct Tape Programming\Projects\Umbraco Customizations\dtp.umb.scsseditor\dtp.umb.scsseditor.web\obj\Debug\dtp.umb.scsseditor.web.csprojResolveAssemblyReference.cache
 D:\Clients Files\Duct Tape Programming\Projects\Umbraco Customizations\dtp.umb.scsseditor\dtp.umb.scsseditor.web\obj\Debug\dtp.umb.scsseditor.web.dll
 D:\Clients Files\Duct Tape Programming\Projects\Umbraco Customizations\dtp.umb.scsseditor\dtp.umb.scsseditor.web\obj\Debug\dtp.umb.scsseditor.web.pdb
-C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\NSass.Wrapper\NSass.Wrapper.x64.dll
-C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\NSass.Wrapper\NSass.Wrapper.x86.dll
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\dtp.umb.scsseditor.web.dll.config
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\dtp.umb.scsseditor.web.dll
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\dtp.umb.scsseditor.web.pdb
@@ -86,7 +84,6 @@ C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\ClientDependency.C
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\cms.dll
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\controls.dll
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\CookComputing.XmlRpcV2.dll
-C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\dtp.umb.scsseditor.cd.dll
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\dtp.umb.scsseditor.lib.dll
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\Examine.dll
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\HtmlAgilityPack.dll
@@ -124,8 +121,6 @@ C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\umbraco.providers.
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\Umbraco.Web.UI.dll
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\UmbracoExamine.dll
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\UrlRewritingNet.UrlRewriter.dll
-C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\NSass.Core.dll
-C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\dtp.umb.scsseditor.cd.pdb
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\dtp.umb.scsseditor.lib.pdb
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\AutoMapper.xml
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\businesslogic.xml
@@ -159,3 +154,8 @@ C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\umbraco.providers.
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\obj\Debug\dtp.umb.scsseditor.web.csprojResolveAssemblyReference.cache
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\obj\Debug\dtp.umb.scsseditor.web.dll
 C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\obj\Debug\dtp.umb.scsseditor.web.pdb
+C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\NSass.Wrapper\NSass.Wrapper.x64.dll
+C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\NSass.Wrapper\NSass.Wrapper.x86.dll
+C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\dtp.umb.scsseditor.cd.dll
+C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\NSass.Core.dll
+C:\Projects\DTP\dtp.umb.scsseditor\dtp.umb.scsseditor.web\bin\dtp.umb.scsseditor.cd.pdb
