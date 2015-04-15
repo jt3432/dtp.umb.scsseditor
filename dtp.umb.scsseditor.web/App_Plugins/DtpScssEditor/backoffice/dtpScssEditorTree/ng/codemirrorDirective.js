@@ -30,10 +30,14 @@
                  scope.codemirror.on('change', function (instance) {
                      var newValue = instance.getValue();
                      if (newValue !== ngModel.$viewValue) {
-                         scope.$evalAsync(function () {
+                         //scope.$evalAsync(function () {
+                         //    ngModel.$modelValue.scss = newValue;
+                         //    ngModel.$modelValue.editor = scope.codemirror;
+                         //});
+                         $timeout(function () {
                              ngModel.$modelValue.scss = newValue;
                              ngModel.$modelValue.editor = scope.codemirror;
-                         });
+                         }, 0);
                      }
                  });
 

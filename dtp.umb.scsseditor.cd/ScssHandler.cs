@@ -17,7 +17,11 @@ namespace dtp.umb.scsseditor.cd
             var writer = new ScssWriter();
             var output = writer.GetOutput(file);
             context.Response.ContentType = "text/css";
-            context.Response.Write(output);
+            context.Response.Write(output.CSS);
+            if(!string.IsNullOrEmpty(output.SourceMap))
+            {
+                System.IO.File.WriteAllText(string.Format("{0}.map", file.FullName), output.SourceMap);
+            }
         }
 
         public bool IsReusable
