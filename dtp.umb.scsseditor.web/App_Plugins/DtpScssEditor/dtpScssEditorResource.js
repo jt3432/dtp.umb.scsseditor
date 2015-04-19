@@ -19,6 +19,9 @@
 	        getMixins: function () {
 	            return $http.get('backoffice/DtpScssEditor/ScssFilesApi/GetMixins');
 	        },
+	        getCss: function (scssFile) {
+	            return $http.post("backoffice/DtpScssEditor/ScssFilesApi/CompileScss", scssFile);
+	        },
 	        buildTreePath: function (currentNodeId) {
 
 	            var fileExt = '';
@@ -56,6 +59,7 @@ angular.module("umbraco.resources")
 	        absolutePath: '',
 	        rootPath: '',
 	        scss: '',
+            css: '',
 	        reset: function () {
 	            this.name = '';
 	            this.path = '';

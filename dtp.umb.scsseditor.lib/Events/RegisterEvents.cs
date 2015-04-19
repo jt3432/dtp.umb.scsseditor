@@ -6,7 +6,7 @@ using Umbraco.Core;
 using Umbraco.Core.Events;
 using dtp.umb.scsseditor.lib.Install;
 
-namespace dtp.umb.foodmenu.Events
+namespace dtp.umb.scsseditor.Events
 {
     public class RegisterEvents : ApplicationEventHandler
     {

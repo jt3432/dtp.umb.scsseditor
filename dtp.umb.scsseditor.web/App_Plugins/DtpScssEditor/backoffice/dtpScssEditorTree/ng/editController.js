@@ -53,6 +53,8 @@
             dtpScssEditorFile.scss = response.data.content;
             $scope.scssFile = dtpScssEditorFile;
 
+            $scope.isPartial = dtpScssEditorFile.name.slice(0, 1) == '_';
+
             navigationService.syncTree({ tree: 'dtpScssEditorTree', path: dtpScssEditorResource.buildTreePath(dtpScssEditorFile.path), forceReload: false }).then(function (syncArgs) {
                 $scope.currentNode = syncArgs.node;
             });
@@ -74,7 +76,11 @@
 
                 dtpScssEditorResource.saveFile(scssFile).then(function (response) {
 
-                    if (response.data) {
+                    $scope.saveSuccessful = response.data.saveSuccess;
+                    $scope.compileSuccessful = response.data.compileSuccess;
+                    $scope.cssOutput = response.data.cssOutput;
+
+                    if (response.data.saveSuccess && response.data.compileSuccess) {
 
                         formHelper.resetForm({ scope: $scope, notifications: '' });
 
@@ -92,20 +98,26 @@
                             $location.path('/settings/dtpScssEditorTree/edit/' + scssFile.pathRelative);
                             $location.replace();
 
-                            navigationService.syncTree({ tree: 'dtpScssEditorTree', path: [-1, -1], forceReload: false });
-                            //navigationService.syncTree({ tree: 'dtpScssEditorTree', path: dtpScssEditorResource.buildTreePath(scssFile.pathRelative), forceReload: true }).then(function (syncArgs) {
-                            //    $scope.currentNode = syncArgs.node;
-                            //});                            
+                            navigationService.syncTree({ tree: 'dtpScssEditorTree', path: [-1, -1], forceReload: false });                          
                         }
 
                         deferred.resolve(response.data);
 
-                        notificationsService.success('Success', 'SCSS file ' + dtpScssEditorFile.name + ' has been saved');
+                        notificationsService.success('Success', 'SCSS file ' + dtpScssEditorFile.name + ' has been saved.');
 
                     } else {
 
-                        notificationsService.error('Failed', 'SCSS file ' + dtpScssEditorFile.name + ' was NOT saved');
+                        $scope.errorMessage = response.data.message;
 
+                        if (!response.data.CompileSuccess && !$scope.isPartial) {
+                            notificationsService.warning('Warning', 'SCSS file ' + dtpScssEditorFile.name + ' has errors and did not compile.');
+                        }
+
+                        if(response.data.saveSuccess) {
+                            notificationsService.success('Success', 'SCSS file ' + dtpScssEditorFile.name + ' has been saved.');
+                        } else {
+                            notificationsService.error('Failed', 'SCSS file ' + dtpScssEditorFile.name + '  was NOT saved.');
+                        }                        
                     }
 
                 }, function (err) {
@@ -123,6 +135,29 @@
 
             return deferred.promise;
 
+        };
+
+        $scope.openPreviewDialog = function () {
+
+            dtpScssEditorFile.css = '';
+
+            var deferred = $q.defer();
+
+            var scssFile = {
+                content: dtpScssEditorFile.scss,
+                pathRelative: dtpScssEditorFile.path,
+                pathFull: dtpScssEditorFile.absolutePath
+            };
+
+            dtpScssEditorResource.getCss(scssFile).then(function (response) {
+                dtpScssEditorFile.css = JSON.parse(response.data);
+                
+            });
+
+            $scope.openDialog('Preview');
+
+            return deferred.promise;
+            
         };
 
         $scope.openDialog = function (dialogType) {
@@ -143,17 +178,17 @@
 
         $scope.insertImport = function () {
             if ($scope.importStatement !== undefined && $scope.importStatement !== '') {                
-                $scope.scssFile.editor.replaceSelection($scope.importStatement);
-                $scope.scssFile.editor.focus();
+                dtpScssEditorFile.editor.replaceSelection($scope.importStatement);
+                dtpScssEditorFile.editor.focus();
                 dialogService.closeAll();
             }
         };
 
         $scope.insertMixin = function () {
             if ($scope.selectedMixin !== undefined && $scope.selectedMixin !== '') {
-                var mixin = $scope.selectedMixin.Mixin.replace('{ }', '{\n\t\t\n\t}');
+                var mixin = $scope.selectedMixin.mixin.replace('{ }', '{\n\t\t\n\t}');
 
-                $.each($scope.selectedMixin.Variables, function (idx, variable) {
+                $.each($scope.selectedMixin.variables, function (idx, variable) {
                     if (variable.Value === '' && variable.Key.indexOf(':') > -1)
                     {
                         var defaultValue = variable.Key.split(':');
@@ -165,23 +200,23 @@
                     mixin = mixin.replace(variable.Key, variable.Value);
                 });
 
-                $scope.scssFile.editor.replaceSelection('@include ' + mixin);
-                $scope.scssFile.editor.focus();
+                dtpScssEditorFile.editor.replaceSelection('@include ' + mixin);
+                dtpScssEditorFile.editor.focus();
                 dialogService.closeAll();
             }
         };
 
         $scope.insertVariable = function () {
             if ($scope.selectedVariable !== undefined && $scope.selectedVariable !== '') {
-                $scope.scssFile.editor.replaceSelection($scope.selectedVariable.name);
-                $scope.scssFile.editor.focus();
+                dtpScssEditorFile.editor.replaceSelection($scope.selectedVariable.name);
+                dtpScssEditorFile.editor.focus();
                 dialogService.closeAll();
             }
         };
 
         $scope.addComment = function () {
-            $scope.scssFile.editor.replaceSelection('/* ' + $scope.scssFile.editor.getSelection() + ' */');
-            $scope.scssFile.editor.focus();
+            dtpScssEditorFile.editor.replaceSelection('/* ' + dtpScssEditorFile.editor.getSelection() + ' */');
+            dtpScssEditorFile.editor.focus();
         }
 
     });

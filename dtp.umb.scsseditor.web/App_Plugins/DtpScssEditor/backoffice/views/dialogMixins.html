@@ -9,13 +9,13 @@
                 <label>Select a Mixin:</label>
                 <div class="controls controls-row">
 
-                    <select class="umb-editor" ng-model="selectedMixin" ng-options="mixin.Mixin group by mixin.Group for mixin in mixins">
+                    <select class="umb-editor" ng-model="selectedMixin" ng-options="mixin.mixin group by mixin.group for mixin in mixins">
                         <option value="">...</option>                        
                     </select>
                 </div>
             </div>
 
-            <div class="umb-el-wrap" ng-repeat="variable in selectedMixin.Variables">
+            <div class="umb-el-wrap" ng-repeat="variable in selectedMixin.variables">
                 <label> Value for {{variable.Key}}</label>
                 <input type="text" ng-model="variable.Value" placeholder="{{variable.Key}}" />
             </div>

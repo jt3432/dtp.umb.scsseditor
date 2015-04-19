@@ -9,7 +9,6 @@
         <umb-header tabs="tabs">
 
             <div class="span8">
-                <!--<umb-content-name placeholder="@placeholders_entername" ng-model="foodMenuItem.name" />-->
                 <h1>Edit SCSS File: <strong>{{scssFile.path}}</strong></h1>
             </div>
 
@@ -20,27 +19,37 @@
                     </button>
                 </div>
             </div>
+
         </umb-header>
 
         <umb-tab-view>
             <umb-tab id="tab1" rel="scss">
 
                 <div class="umb-pane pane">
-                    <div class="btn-toolbar dtp-btn-toolbar">
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-default" title="Insert an import statement" ng-click="openDialog('Imports')">@import</button>
-                            <button type="button" class="btn btn-default" title="Insert an mixin statement" ng-click="openDialog('Mixins')">@mixin</button>
-                            <button type="button" class="btn btn-default" title="Insert a variable" ng-click="openDialog('Variables')">$variable</button>
-                            <button type="button" class="btn btn-default" title="Comment out selected text" ng-click="addComment()">/*comment*/</button>
-                        </div>
+
+                    <div class="alert alert-warning" role="alert" ng-if="compileSuccessful === false">
+                        {{errorMessage}}
                     </div>
-                    <div style="border: solid 1px #ddd">
-                        <textarea dtpng-codemirror ng-model="scssFile"></textarea>
+
+                    <div class="span12">
+                        <div class="btn-toolbar dtp-btn-toolbar">
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-default" title="Insert an import statement" ng-click="openDialog('Imports')">@import</button>
+                                <button type="button" class="btn btn-default" title="Insert an mixin statement" ng-click="openDialog('Mixins')">@mixin</button>
+                                <button type="button" class="btn btn-default" title="Insert a variable" ng-click="openDialog('Variables')">$variable</button>
+                                <button type="button" class="btn btn-default" title="Comment out selected text" ng-click="addComment()">/*comment*/</button>
+                                <button type="button" class="btn btn-default" title="CSS Perview" ng-click="openPreviewDialog()" ng-if="isPartial != true">&#x2713; Preview</button>
+                            </div>
+                        </div>
+                        <div style="border: solid 1px #ddd">
+                            <textarea dtpng-codemirror ng-model="scssFile"></textarea>
+                        </div>
                     </div>
                 </div>
 
             </umb-tab>
-            <umb-tab id="tab2" rel="properties">
+
+            <umb-tab id="tab2" rel="properties" ng-click="console.log('test test')">
                 <div class="umb-pane pane" style="">
                     <div class="control-group umb-control-group" style="">
 

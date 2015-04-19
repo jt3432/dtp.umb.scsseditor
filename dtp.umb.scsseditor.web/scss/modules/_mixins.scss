@@ -1,3 +1,4 @@
+/* Minins */
 /* Mixins by Sebastian Ekström at http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox */
 
 @function calculateRem($size) {
@@ -51,13 +52,13 @@ $retina-suffix: '@2x';
   }
   @-moz-keyframes $animation-name {
     @content;
-  }  
+  }
   @-ms-keyframes $animation-name {
     @content;
   }
   @-o-keyframes $animation-name {
     @content;
-  }  
+  }
   @keyframes $animation-name {
     @content;
   }

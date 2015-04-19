@@ -20,6 +20,7 @@ using System.Configuration;
 using System.Xml;
 using dtp.umb.scsseditor.lib.Models;
 using System.Text.RegularExpressions;
+using dtp.umb.scsseditor.lib.Utilities;
 
 namespace dtp.umb.scsseditor.Controllers
 {
@@ -178,15 +179,41 @@ namespace dtp.umb.scsseditor.Controllers
 
         [System.Web.Http.AcceptVerbs("POST")]
         [System.Web.Http.HttpPost]
-        public bool SaveFile(ScssFile scssFile)
+        public SavedFileResponseModel SaveFile(ScssFile scssFile)
         {
-            bool success = true;
-            
+            SavedFileResponseModel savedFileResponseModel = new SavedFileResponseModel();
+
+            // Using this to create path instead of using scssFile.PathFull because this creates a 
+            // path with files current name and handles the case when the file name was updated.
             var path = Path.Combine(_rootScssPath, scssFile.PathRelative);
+
             try
             {
                 System.IO.File.WriteAllText(path, scssFile.Content);
+                savedFileResponseModel.SaveSuccess = true;
+            }
+            catch
+            {
+                savedFileResponseModel.SaveSuccess = false;
+            }
 
+            savedFileResponseModel.IsPartial = Path.GetFileName(path).StartsWith("_");
+
+            if (savedFileResponseModel.IsPartial)
+            {
+                savedFileResponseModel.CompileSuccess = true;               
+            }
+            else 
+            {
+                string cssOutput = String.Empty;
+                string message = String.Empty;
+                savedFileResponseModel.CompileSuccess = ScssHelper.ScssCompile(scssFile.Content, _rootScssPath, out cssOutput, out message);
+                savedFileResponseModel.CssOutput = cssOutput;
+                savedFileResponseModel.Message = message;
+            }
+
+            if(savedFileResponseModel.SaveSuccess && savedFileResponseModel.CompileSuccess)
+            {
                 CompilationSection compilationSection = (CompilationSection)System.Configuration.ConfigurationManager.GetSection(@"system.web/compilation");
                 if (!compilationSection.Debug)
                 {
@@ -203,19 +230,14 @@ namespace dtp.umb.scsseditor.Controllers
 
                     cdConfig.Save(cdConfigPath);
                 }
-                
-            }
-            catch
-            {
-                success = false;
             }
 
-            if (success && !scssFile.PathFull.Contains(scssFile.PathRelative))
+            if (savedFileResponseModel.SaveSuccess && !scssFile.PathFull.Contains(scssFile.PathRelative))
             {
                 System.IO.File.Delete(scssFile.PathFull);
             }
 
-            return success;
+            return savedFileResponseModel;
         }
 
         [System.Web.Http.AcceptVerbs("GET", "POST")]
@@ -308,5 +330,23 @@ namespace dtp.umb.scsseditor.Controllers
 
             return variables;
         }
+
+        [System.Web.Http.AcceptVerbs("POST")]
+        [System.Web.Http.HttpPost]
+        public string CompileScss(ScssFile scssFile)
+        {
+            string cssOutput = String.Empty;
+            string message = String.Empty;
+
+            if (ScssHelper.ScssCompile(scssFile.Content, _rootScssPath, out cssOutput, out message))
+            {
+                return cssOutput;
+            }
+            else
+            {
+                return message;
+            }                        
+        }
+
     }
 }
