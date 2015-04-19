@@ -1,0 +1,44 @@
+﻿
+<div class="umb-panel umb-modal" ng-controller="DtpScssEditor.ScssEditorEditController">
+    <div class="umb-panel-body no-header with-footer">
+        <input name="ctl00$body$tagName" type="hidden" id="body_tagName" value="umbraco:Item">
+
+        <div class="umb-pane " style="">
+            <h5 class="umb-pane-title">Insert Mixin</h5>
+            <div class="umb-el-wrap">
+                <label>Select a Mixin:</label>
+                <div class="controls controls-row">
+
+                    <select class="umb-editor" ng-model="selectedMixin" ng-options="mixin.mixin group by mixin.group for mixin in mixins">
+                        <option value="">...</option>                        
+                    </select>
+                </div>
+            </div>
+
+            <div class="umb-el-wrap" ng-repeat="variable in selectedMixin.variables">
+                <label> Value for {{variable.Key}}</label>
+                <input type="text" ng-model="variable.Value" placeholder="{{variable.Key}}" />
+            </div>
+
+            <br /><br />
+            <div>
+                <p>To populate this dropdown create a file named <strong>_mixins.scss</strong> any where under your Scss Files root folder.</p>
+                <p>The mixins will be displayed in the same order as they are entered in the <strong>_mixins.scss</strong> file.</p>
+                <!--<p>You can group mixins by add a comment before a set of mixins in the mixins file.</p>-->
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="umb-panel-footer">
+        <div class="btn-toolbar dtp-btn-toolbar">
+            <a id="cancelButton" href="#" class="btn btn-link" ng-click="closeDialog($event)">
+                Cancel
+            </a>
+
+            <input id="submitButton" type="button" name="gem" class="btn btn-primary" value="Insert" ng-click="insertMixin()">
+        </div>
+    </div>
+
+</div>

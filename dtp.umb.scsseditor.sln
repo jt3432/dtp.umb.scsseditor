@@ -16,6 +16,28 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{94BE2F
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "test.umbraco.local", "http://localhost:1244", "{F84995C1-2554-4AC7-ABAD-1F729732D298}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_1244"
+		Debug.AspNetCompiler.PhysicalPath = "test.umbraco.local\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1244\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_1244"
+		Release.AspNetCompiler.PhysicalPath = "test.umbraco.local\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1244\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "test.umbraco.local\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +56,10 @@ Global
 		{D17F7530-725E-4DF3-BE41-9601DD67B5B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D17F7530-725E-4DF3-BE41-9601DD67B5B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D17F7530-725E-4DF3-BE41-9601DD67B5B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F84995C1-2554-4AC7-ABAD-1F729732D298}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F84995C1-2554-4AC7-ABAD-1F729732D298}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F84995C1-2554-4AC7-ABAD-1F729732D298}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{F84995C1-2554-4AC7-ABAD-1F729732D298}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umbPackage>
+  <files>
+    <file>
+      <guid>dtp.umb.scsseditor.cd.dll</guid>
+      <orgPath>/bin</orgPath>
+      <orgName>dtp.umb.scsseditor.cd.dll</orgName>
+    </file>
+    <file>
+      <guid>dtpScssEditorResource.js</guid>
+      <orgPath>/App_Plugins/DtpScssEditor</orgPath>
+      <orgName>dtpScssEditorResource.js</orgName>
+    </file>
+    <file>
+      <guid>package.manifest</guid>
+      <orgPath>/App_Plugins/DtpScssEditor</orgPath>
+      <orgName>package.manifest</orgName>
+    </file>
+    <file>
+      <guid>create.html</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/backoffice/dtpScssEditorTree</orgPath>
+      <orgName>create.html</orgName>
+    </file>
+    <file>
+      <guid>delete.html</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/backoffice/dtpScssEditorTree</orgPath>
+      <orgName>delete.html</orgName>
+    </file>
+    <file>
+      <guid>edit.html</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/backoffice/dtpScssEditorTree</orgPath>
+      <orgName>edit.html</orgName>
+    </file>
+    <file>
+      <guid>codemirrorDirective.js</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/backoffice/dtpScssEditorTree/ng</orgPath>
+      <orgName>codemirrorDirective.js</orgName>
+    </file>
+    <file>
+      <guid>createController.js</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/backoffice/dtpScssEditorTree/ng</orgPath>
+      <orgName>createController.js</orgName>
+    </file>
+    <file>
+      <guid>deleteController.js</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/backoffice/dtpScssEditorTree/ng</orgPath>
+      <orgName>deleteController.js</orgName>
+    </file>
+    <file>
+      <guid>editController.js</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/backoffice/dtpScssEditorTree/ng</orgPath>
+      <orgName>editController.js</orgName>
+    </file>
+    <file>
+      <guid>dialogImports.html</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/backoffice/views</orgPath>
+      <orgName>dialogImports.html</orgName>
+    </file>
+    <file>
+      <guid>dialogMixins.html</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/backoffice/views</orgPath>
+      <orgName>dialogMixins.html</orgName>
+    </file>
+    <file>
+      <guid>dialogPreview.html</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/backoffice/views</orgPath>
+      <orgName>dialogPreview.html</orgName>
+    </file>
+    <file>
+      <guid>dialogVariables.html</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/backoffice/views</orgPath>
+      <orgName>dialogVariables.html</orgName>
+    </file>
+    <file>
+      <guid>codemirror.css</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/resources</orgPath>
+      <orgName>codemirror.css</orgName>
+    </file>
+    <file>
+      <guid>codemirror.js</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/resources</orgPath>
+      <orgName>codemirror.js</orgName>
+    </file>
+    <file>
+      <guid>css.js</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/resources</orgPath>
+      <orgName>css.js</orgName>
+    </file>
+    <file>
+      <guid>dtpscsseditor.css</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/resources</orgPath>
+      <orgName>dtpscsseditor.css</orgName>
+    </file>
+    <file>
+      <guid>dtp.umb.scsseditor.lib.dll</guid>
+      <orgPath>/bin</orgPath>
+      <orgName>dtp.umb.scsseditor.lib.dll</orgName>
+    </file>
+    <file>
+      <guid>LibSass.x64.dll</guid>
+      <orgPath>/bin</orgPath>
+      <orgName>LibSass.x64.dll</orgName>
+    </file>
+    <file>
+      <guid>libsassnet.dll</guid>
+      <orgPath>/bin</orgPath>
+      <orgName>libsassnet.dll</orgName>
+    </file>
+    <file>
+      <guid>LibSass.x86.dll</guid>
+      <orgPath>/bin/x86</orgPath>
+      <orgName>LibSass.x86.dll</orgName>
+    </file>
+    <file>
+      <guid>bbd820db-9dee-4a93-9807-cbfde312312c_libsassnet.dll</guid>
+      <orgPath>/bin/x86</orgPath>
+      <orgName>libsassnet.dll</orgName>
+    </file>
+  </files>
+  <info>
+    <package>
+      <name>Backoffice Scss Editor</name>
+      <version>2.0</version>
+      <license url="http://opensource.org/licenses/MIT">MIT License</license>
+      <url>https://our.umbraco.org/projects/backoffice-extensions/backoffice-scss-editor</url>
+      <requirements>
+        <major>3</major>
+        <minor>0</minor>
+        <patch>0</patch>
+      </requirements>
+    </package>
+    <author>
+      <name>Jason Thomas</name>
+      <website>http://www.ducttapeprogramming.com</website>
+    </author>
+    <readme><![CDATA[Umbraco 7 Backoffice SCSS Editor
+
+Ver 2.0
+	- Added preview feature for non-partial SCSS files.
+	- Added error message for SCSS compile errors for non-partial files.
+	- Replaced NSass LibSass wrapper with LibSassNet.x64 3.0.1.1 wrapper
+
+Ver 1.0
+	- Added Toolbar to editor to allow for inserting import statments, inserting mixins, inserting variables and commenting out text.
+	- Added example SCSS files.
+
+Ver .02
+     - Add functionality to advance the ClientDependency version number when SCSS file is saved.
+ver  .01
+    - Beta Release
+
+Once you go SCSS (http://sass-lang.com/) it is had to go back! This simple back office extension adds a SCSS file editor and ClientDependency compiler to our favorite CMS.
+
+To install:
+Download package and install via the Umbraco back office, then add the below httpHandler reference into your web.config under the node:
+
+<add path="*.scss" verb="GET" type="dtp.umb.scsseditor.cd.SassHandler, dtp.umb.scsseditor.cd" />
+
+Also add this handler under the node:
+
+<remove name="DtpScssHandler" />
+<add name="DtpScssHandler" path="*.scss" verb="GET" type="dtp.umb.scsseditor.cd.ScssHandler, dtp.umb.scsseditor.cd" resourceType="File" preCondition="" />
+
+Web.Config settings:
+The extension will add three appSettings key to the web.config:
+
+<add key="dtpScssEditor:Version" value="0.01" />  
+<add key="dtpScssEditor:Root" value="~/scss/" />  
+<add key="dtpScssEditor:DeleteEmptyDirectory" value="true" />
+
+-dtpScssEditor:Version, is the extension version. Just for reference, recommend not to change.
+
+-dtpScssEditor:Root, is the configurable location of your scss files. Default is ~/scss/ and the directory will be created automatically.
+
+-dtpScssEditor:DeleteEmptyDirectory, when true prevents the deletion of directories that are not empty. Just a safeguard to protect you from deleting all your hard work.
+
+Using your SCSS files:
+The point of this is to have some runtime compiled SCSS to CSS. To use your SCSS file in your site/templates include the Client Dependency MVC handler in your view, then add you SCSS file with the Client Dependency RequiresCss helper.
+
+@using ClientDependency.Core.Mvc;
+@{
+    Html.RequiresCss("~/scss/main.scss");  
+}
+
+Don't forget to add the output helper where you want the compiled SCSS to render.
+
+@Html.RenderCssHere();  
+
+
+Note: See Client Dependency (CD) GitHub for CD documentation: https://github.com/Shazwazza/ClientDependency
+]]></readme>
+  </info>
+  <DocumentTypes />
+  <Templates />
+  <Stylesheets />
+  <Macros />
+  <DictionaryItems />
+  <Languages />
+  <DataTypes />
+</umbPackage>
