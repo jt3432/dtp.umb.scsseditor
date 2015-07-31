@@ -199,20 +199,7 @@ namespace dtp.umb.scsseditor.Controllers
 
             savedFileResponseModel.IsPartial = Path.GetFileName(path).StartsWith("_");
 
-            if (savedFileResponseModel.IsPartial)
-            {
-                savedFileResponseModel.CompileSuccess = true;               
-            }
-            else 
-            {
-                string cssOutput = String.Empty;
-                string message = String.Empty;
-                savedFileResponseModel.CompileSuccess = ScssHelper.ScssCompile(scssFile.Content, _rootScssPath, out cssOutput, out message);
-                savedFileResponseModel.CssOutput = cssOutput;
-                savedFileResponseModel.Message = message;
-            }
-
-            if(savedFileResponseModel.SaveSuccess && savedFileResponseModel.CompileSuccess)
+            if(savedFileResponseModel.SaveSuccess)
             {
                 CompilationSection compilationSection = (CompilationSection)System.Configuration.ConfigurationManager.GetSection(@"system.web/compilation");
                 if (!compilationSection.Debug)

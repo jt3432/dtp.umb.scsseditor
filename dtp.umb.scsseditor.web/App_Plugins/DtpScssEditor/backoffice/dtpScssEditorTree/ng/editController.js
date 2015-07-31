@@ -109,9 +109,9 @@
 
                         $scope.errorMessage = response.data.message;
 
-                        if (!response.data.CompileSuccess && !$scope.isPartial) {
-                            notificationsService.warning('Warning', 'SCSS file ' + dtpScssEditorFile.name + ' has errors and did not compile.');
-                        }
+                        //if (!response.data.CompileSuccess && !$scope.isPartial) {
+                        //    notificationsService.warning('Warning', 'SCSS file ' + dtpScssEditorFile.name + ' has errors and did not compile.');
+                        //}
 
                         if(response.data.saveSuccess) {
                             notificationsService.success('Success', 'SCSS file ' + dtpScssEditorFile.name + ' has been saved.');
