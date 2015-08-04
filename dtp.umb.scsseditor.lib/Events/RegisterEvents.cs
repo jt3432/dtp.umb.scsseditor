@@ -13,6 +13,8 @@ namespace dtp.umb.scsseditor.Events
         protected override void ApplicationStarted(UmbracoApplicationBase umbracoApplication, ApplicationContext applicationContext)
         {
             DtpScssEditorInstaller.InstallAppSettingKeys();
+            DtpScssEditorInstaller.InstallHttpHandlerReferences();
+            DtpScssEditorInstaller.ResetClientDependencyVersion();
         }
     }
 }

@@ -77,12 +77,12 @@
       <HintPath>..\packages\UmbracoCms.Core.7.2.4\lib\interfaces.dll</HintPath>
     </Reference>
     <Reference Include="LibSass.x64, Version=0.0.0.0, Culture=neutral, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\libsassnet.x64.3.0.1.1\lib\net40\LibSass.x64.dll</HintPath>
+      <HintPath>..\packages\libsassnet.x64.3.2.5\lib\net40\LibSass.x64.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="libsassnet, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\libsassnet.x64.3.0.1.1\lib\net40\libsassnet.dll</HintPath>
+      <HintPath>..\packages\libsassnet.x64.3.2.5\lib\net40\libsassnet.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="log4net">
       <HintPath>..\packages\UmbracoCms.Core.7.2.4\lib\log4net.dll</HintPath>

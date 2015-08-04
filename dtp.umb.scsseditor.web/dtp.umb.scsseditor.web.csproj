@@ -91,12 +91,12 @@
       <HintPath>..\packages\UmbracoCms.Core.7.2.4\lib\interfaces.dll</HintPath>
     </Reference>
     <Reference Include="LibSass.x64, Version=0.0.0.0, Culture=neutral, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\libsassnet.x64.3.1.0.0\lib\net40\LibSass.x64.dll</HintPath>
+      <HintPath>..\packages\libsassnet.x64.3.2.5\lib\net40\LibSass.x64.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="libsassnet, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\libsassnet.x64.3.1.0.0\lib\net40\libsassnet.dll</HintPath>
+      <HintPath>..\packages\libsassnet.x64.3.2.5\lib\net40\libsassnet.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -379,10 +379,10 @@
     <Content Include="Config\DtpScssEditor.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="scss\main.scss" />
-    <Content Include="scss\modules\_mixins.scss" />
-    <Content Include="scss\modules\_pages.scss" />
-    <Content Include="scss\modules\_variables.scss" />
+    <Content Include="scss\examples\main.scss" />
+    <Content Include="scss\examples\modules\_mixins.scss" />
+    <Content Include="scss\examples\modules\_pages.scss" />
+    <Content Include="scss\examples\modules\_variables.scss" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,66 @@
+﻿<form novalidate name="scssEditorForm"
+      ng-controller="DtpScssEditor.ScssEditorEditController"
+      ng-show="loaded"
+      ng-submit="save()"
+      val-form-manager>
+
+    <umb-panel ng-class="'editor-breadcrumb'">
+
+        <umb-header tabs="tabs">
+
+            <div class="span8">
+                <h1>Edit SCSS File: <strong>{{scssFile.path}}</strong></h1>
+            </div>
+
+            <div class="span4">
+                <div class="btn-toolbar pull-right umb-btn-toolbar">
+                    <button type="submit" data-hotkey="ctrl+s" class="btn btn-success">
+                        <localize key="buttons_save">Save</localize>
+                    </button>
+                </div>
+            </div>
+
+        </umb-header>
+
+        <umb-tab-view>
+            <umb-tab id="tab1" rel="scss">
+
+                <div class="umb-pane pane">
+
+                    <div class="span12">
+                        <div class="btn-toolbar dtp-btn-toolbar">
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-default" title="Insert an import statement" ng-click="openDialog('Imports')">@import</button>
+                                <button type="button" class="btn btn-default" title="Insert an mixin statement" ng-click="openDialog('Mixins')">@mixin</button>
+                                <button type="button" class="btn btn-default" title="Insert a variable" ng-click="openDialog('Variables')">$variable</button>
+                                <button type="button" class="btn btn-default" title="Comment out selected text" ng-click="addComment()">/*comment*/</button>
+                                <button type="button" class="btn btn-default" title="CSS Perview" ng-click="openPreviewDialog()" ng-if="isPartial != true">&#x2713; Preview</button>
+                            </div>
+                        </div>
+                        <div style="border: solid 1px #ddd">
+                            <textarea dtpng-codemirror ng-model="scssFile"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+            </umb-tab>
+
+            <umb-tab id="tab2" rel="properties" ng-click="console.log('test test')">
+                <div class="umb-pane pane" style="">
+                    <div class="control-group umb-control-group" style="">
+
+                        <div class="umb-el-wrap ">
+                            <label class="control-label" for="inputPassword">Filename</label>
+                            <div class="controls controls-row">
+                                <input name="name" type="text" value="bootstrap.min" ng-model="scssFile.path" style="width:350px;">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </umb-tab>
+        </umb-tab-view>
+
+    </umb-panel>
+
+</form>

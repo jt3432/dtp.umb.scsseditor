@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umbPackage>
+  <files>
+    <file>
+      <guid>dtpScssEditorResource.js</guid>
+      <orgPath>/App_Plugins/DtpScssEditor</orgPath>
+      <orgName>dtpScssEditorResource.js</orgName>
+    </file>
+    <file>
+      <guid>package.manifest</guid>
+      <orgPath>/App_Plugins/DtpScssEditor</orgPath>
+      <orgName>package.manifest</orgName>
+    </file>
+    <file>
+      <guid>create.html</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/backoffice/dtpScssEditorTree</orgPath>
+      <orgName>create.html</orgName>
+    </file>
+    <file>
+      <guid>delete.html</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/backoffice/dtpScssEditorTree</orgPath>
+      <orgName>delete.html</orgName>
+    </file>
+    <file>
+      <guid>edit.html</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/backoffice/dtpScssEditorTree</orgPath>
+      <orgName>edit.html</orgName>
+    </file>
+    <file>
+      <guid>codemirrorDirective.js</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/backoffice/dtpScssEditorTree/ng</orgPath>
+      <orgName>codemirrorDirective.js</orgName>
+    </file>
+    <file>
+      <guid>createController.js</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/backoffice/dtpScssEditorTree/ng</orgPath>
+      <orgName>createController.js</orgName>
+    </file>
+    <file>
+      <guid>deleteController.js</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/backoffice/dtpScssEditorTree/ng</orgPath>
+      <orgName>deleteController.js</orgName>
+    </file>
+    <file>
+      <guid>editController.js</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/backoffice/dtpScssEditorTree/ng</orgPath>
+      <orgName>editController.js</orgName>
+    </file>
+    <file>
+      <guid>dialogImports.html</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/backoffice/views</orgPath>
+      <orgName>dialogImports.html</orgName>
+    </file>
+    <file>
+      <guid>dialogMixins.html</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/backoffice/views</orgPath>
+      <orgName>dialogMixins.html</orgName>
+    </file>
+    <file>
+      <guid>dialogPreview.html</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/backoffice/views</orgPath>
+      <orgName>dialogPreview.html</orgName>
+    </file>
+    <file>
+      <guid>dialogVariables.html</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/backoffice/views</orgPath>
+      <orgName>dialogVariables.html</orgName>
+    </file>
+    <file>
+      <guid>codemirror.css</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/resources</orgPath>
+      <orgName>codemirror.css</orgName>
+    </file>
+    <file>
+      <guid>codemirror.js</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/resources</orgPath>
+      <orgName>codemirror.js</orgName>
+    </file>
+    <file>
+      <guid>css.js</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/resources</orgPath>
+      <orgName>css.js</orgName>
+    </file>
+    <file>
+      <guid>dtpscsseditor.css</guid>
+      <orgPath>/App_Plugins/DtpScssEditor/resources</orgPath>
+      <orgName>dtpscsseditor.css</orgName>
+    </file>
+    <file>
+      <guid>dtp.umb.scsseditor.cd.dll</guid>
+      <orgPath>/bin</orgPath>
+      <orgName>dtp.umb.scsseditor.cd.dll</orgName>
+    </file>
+    <file>
+      <guid>dtp.umb.scsseditor.lib.dll</guid>
+      <orgPath>/bin</orgPath>
+      <orgName>dtp.umb.scsseditor.lib.dll</orgName>
+    </file>
+    <file>
+      <guid>libsassnet.dll</guid>
+      <orgPath>/bin</orgPath>
+      <orgName>libsassnet.dll</orgName>
+    </file>
+    <file>
+      <guid>main.scss</guid>
+      <orgPath>/scss/examples</orgPath>
+      <orgName>main.scss</orgName>
+    </file>
+    <file>
+      <guid>_mixins.scss</guid>
+      <orgPath>/scss/examples/modules</orgPath>
+      <orgName>_mixins.scss</orgName>
+    </file>
+    <file>
+      <guid>_pages.scss</guid>
+      <orgPath>/scss/examples/modules</orgPath>
+      <orgName>_pages.scss</orgName>
+    </file>
+    <file>
+      <guid>_variables.scss</guid>
+      <orgPath>/scss/examples/modules</orgPath>
+      <orgName>_variables.scss</orgName>
+    </file>
+    <file>
+      <guid>LibSass.x64.dll</guid>
+      <orgPath>/bin</orgPath>
+      <orgName>LibSass.x64.dll</orgName>
+    </file>
+  </files>
+  <info>
+    <package>
+      <name>Backoffice Scss Editor x64</name>
+      <version>2.2</version>
+      <license url="http://opensource.org/licenses/MIT">MIT License</license>
+      <url>https://our.umbraco.org/projects/backoffice-extensions/backoffice-scss-editor</url>
+      <requirements>
+        <major>3</major>
+        <minor>0</minor>
+        <patch>0</patch>
+      </requirements>
+    </package>
+    <author>
+      <name>Jason Thomas</name>
+      <website>http://www.ducttapeprogramming.com</website>
+    </author>
+    <readme><![CDATA[Umbraco 7 Backoffice SCSS Editor x64
+
+https://our.umbraco.org/projects/backoffice-extensions/backoffice-scss-editor]]></readme>
+  </info>
+  <DocumentTypes />
+  <Templates />
+  <Stylesheets />
+  <Macros />
+  <DictionaryItems />
+  <Languages />
+  <DataTypes />
+</umbPackage>

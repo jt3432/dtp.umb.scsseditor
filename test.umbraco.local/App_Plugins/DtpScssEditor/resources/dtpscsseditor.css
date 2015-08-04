@@ -1,0 +1,39 @@
+﻿.dtp-btn-toolbar {
+    padding: 0;
+    margin: 0;
+    background: #f7f7f7;
+    border: #e8e8e8 1px solid;
+    border-bottom: none;
+}
+
+    .dtp-btn-toolbar .btn {
+        border: none;
+        border-right: solid 1px #ccc;
+    }
+
+    .dtp-btn-toolbar .btn-group > .btn + .btn {
+        margin-left: 0;
+    }
+
+.umb-modal .dtp-btn-toolbar {
+    padding: 15px 20px 10px 20px;
+    margin-top: 30px;
+    clear: both;
+    text-align: right;
+    background: #fff;
+    border: none;
+}
+
+    .umb-modal .dtp-btn-toolbar .btn {
+        border: none;
+    }
+
+.preview-container {
+    white-space: pre; 
+    padding: 5px 10px; 
+    border: solid 1px #dddddd; 
+    border-radius: 5px; 
+    background-color: #eeeeee; 
+    overflow-x: auto; 
+    height: 80%;
+}

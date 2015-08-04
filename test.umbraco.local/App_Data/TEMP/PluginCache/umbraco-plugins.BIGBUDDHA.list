@@ -4,8 +4,8 @@
     <add type="umbraco.BusinessLogic.ApplicationRegistrar, businesslogic, Version=1.0.5557.19141, Culture=neutral, PublicKeyToken=null" />
     <add type="umbraco.BusinessLogic.ApplicationTreeRegistrar, businesslogic, Version=1.0.5557.19141, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Core.Strategies.RelateOnCopyHandler, Umbraco.Core, Version=1.0.5557.19139, Culture=neutral, PublicKeyToken=null" />
-    <add type="umbraco.providers.members.MembershipEventHandler, umbraco.providers, Version=1.0.5557.19143, Culture=neutral, PublicKeyToken=null" />
     <add type="dtp.umb.scsseditor.Events.RegisterEvents, dtp.umb.scsseditor.lib, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.providers.members.MembershipEventHandler, umbraco.providers, Version=1.0.5557.19143, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.Cache.CacheRefresherEventHandler, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.Models.Mapping.LogModelMapper, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.Models.Mapping.MacroModelMapper, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
@@ -66,6 +66,8 @@
     <add type="Umbraco.Web.Controllers.UmbLoginController, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
   </baseType>
   <baseType type="Umbraco.Web.WebApi.UmbracoApiController" resolutionType="FindAllTypes">
+    <add type="dtp.umb.scsseditor.Controllers.ScssFilesApiController, dtp.umb.scsseditor.lib, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null" />
+    <add type="dtp.umb.scsseditor.lib.Trees.ScssEditorTreeController, dtp.umb.scsseditor.lib, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.Editors.AuthenticationController, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.Editors.ContentController, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.Editors.DashboardController, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
@@ -101,8 +103,6 @@
     <add type="Umbraco.Web.WebServices.ExamineManagementApiController, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.WebServices.TagsController, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.WebServices.XmlDataIntegrityController, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
-    <add type="dtp.umb.scsseditor.Controllers.ScssFilesApiController, dtp.umb.scsseditor.lib, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null" />
-    <add type="dtp.umb.scsseditor.lib.Trees.ScssEditorTreeController, dtp.umb.scsseditor.lib, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null" />
   </baseType>
   <baseType type="Umbraco.Core.Media.IThumbnailProvider" resolutionType="FindAllTypes">
     <add type="Umbraco.Web.Media.ThumbnailProviders.MediaTypeIconThumbnailProvider, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
@@ -144,6 +144,8 @@
     <add type="Umbraco.Web.Cache.UserTypeCacheRefresher, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
   </baseType>
   <baseType type="umbraco.interfaces.ITree" resolutionType="FindAllTypes">
+    <add type="umbraco.editorControls.MultiNodeTreePicker.FilteredContentTree, umbraco.editorControls, Version=1.0.5557.19145, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.editorControls.MultiNodeTreePicker.FilteredMediaTree, umbraco.editorControls, Version=1.0.5557.19145, Culture=neutral, PublicKeyToken=null" />
     <add type="umbraco.loadPackager, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.Trees.PartialViewsTree, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.Trees.PartialViewMacrosTree, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
@@ -177,15 +179,13 @@
     <add type="umbraco.cms.presentation.Trees.LegacyTree, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
     <add type="umbraco.cms.presentation.Trees.UserPermissions, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
     <add type="umbraco.cms.presentation.Trees.UserTypes, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
-    <add type="umbraco.editorControls.MultiNodeTreePicker.FilteredContentTree, umbraco.editorControls, Version=1.0.5557.19145, Culture=neutral, PublicKeyToken=null" />
-    <add type="umbraco.editorControls.MultiNodeTreePicker.FilteredMediaTree, umbraco.editorControls, Version=1.0.5557.19145, Culture=neutral, PublicKeyToken=null" />
   </baseType>
   <baseType type="Umbraco.Web.Trees.TreeController" resolutionType="FindTypesWithAttribute">
+    <add type="dtp.umb.scsseditor.lib.Trees.ScssEditorTreeController, dtp.umb.scsseditor.lib, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.Trees.DataTypeTreeController, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.Trees.MemberTreeController, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.Trees.MediaTreeController, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.Trees.ContentTreeController, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
-    <add type="dtp.umb.scsseditor.lib.Trees.ScssEditorTreeController, dtp.umb.scsseditor.lib, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null" />
   </baseType>
   <baseType type="umbraco.interfaces.ITree" resolutionType="FindTypesWithAttribute">
     <add type="umbraco.loadPackager, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
@@ -209,8 +209,6 @@
     <add type="umbraco.cms.presentation.Trees.UserTypes, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
   </baseType>
   <baseType type="Umbraco.Core.PropertyEditors.IParameterEditor" resolutionType="FindAllTypes">
-    <add type="Umbraco.Core.PropertyEditors.ParameterEditor, Umbraco.Core, Version=1.0.5557.19139, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Core.PropertyEditors.PropertyEditor, Umbraco.Core, Version=1.0.5557.19139, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.PropertyEditors.GridPropertyEditor, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.PropertyEditors.EmailAddressPropertyEditor, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.PropertyEditors.ImageCropperPropertyEditor, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
@@ -253,5 +251,43 @@
     <add type="Umbraco.Web.PropertyEditors.TextAreaPropertyEditor, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.PropertyEditors.TextboxPropertyEditor, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Web.PropertyEditors.TrueFalsePropertyEditor, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Core.PropertyEditors.ParameterEditor, Umbraco.Core, Version=1.0.5557.19139, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Core.PropertyEditors.PropertyEditor, Umbraco.Core, Version=1.0.5557.19139, Culture=neutral, PublicKeyToken=null" />
+  </baseType>
+  <baseType type="umbraco.interfaces.IAction" resolutionType="FindAllTypes">
+    <add type="umbraco.cms.presentation.developer.RelationTypes.TreeMenu.ActionDeleteRelationType, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.cms.presentation.developer.RelationTypes.TreeMenu.ActionNewRelationType, umbraco, Version=1.0.5557.19144, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.PlaceboAction, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionAssignDomain, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionAudit, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionBrowse, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionChangeDocType, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionCopy, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionDelete, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionDisable, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionEmptyTranscan, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionExport, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionImport, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionMove, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionNew, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionNewFolder, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionNotify, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionNull, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionPackage, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionPackageCreate, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionProtect, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionPublish, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionQuit, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionRefresh, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionRePublish, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionRights, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionRollback, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionSendToTranslate, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionSort, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionToPublish, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionTranslate, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionUpdate, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ContextMenuSeperator, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
+    <add type="umbraco.BusinessLogic.Actions.ActionUnPublish, cms, Version=1.0.5557.19142, Culture=neutral, PublicKeyToken=null" />
   </baseType>
 </plugins>

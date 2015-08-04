@@ -1,0 +1,38 @@
+﻿
+<div class="umb-panel umb-modal" ng-controller="DtpScssEditor.ScssEditorEditController">
+    <div class="umb-panel-body no-header with-footer">
+        <input name="ctl00$body$tagName" type="hidden" id="body_tagName" value="umbraco:Item">
+
+        <div class="umb-pane " style="">
+            <h5 class="umb-pane-title">Insert Variable</h5>
+            <div class="umb-el-wrap">
+                <label>Select a Variable:</label>
+                <div class="controls controls-row">
+
+                    <select class="umb-editor" ng-model="selectedVariable" ng-options="variable.name group by variable.group for variable in variables">
+                        <option value="">...</option>                        
+                    </select>
+                </div>
+            </div>
+            <br /><br />
+            <div>
+                <p>To populate this dropdown create a file named <strong>_variables.scss</strong> any where under your Scss Files root folder.</p>
+                <p>The varibles will be displayed in the same order as they are entered in the <strong>_variables.scss</strong> file.</p>
+                <p>You can group variables by add a block comment before a set of variables in the variables file.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="umb-panel-footer">
+        <div class="btn-toolbar dtp-btn-toolbar">
+            <a id="cancelButton" href="#" class="btn btn-link" ng-click="closeDialog($event)">
+                Cancel
+            </a>
+
+            <input id="submitButton" type="button" name="gem" class="btn btn-primary" value="Insert" ng-click="insertVariable()">
+        </div>
+    </div>
+
+</div>
