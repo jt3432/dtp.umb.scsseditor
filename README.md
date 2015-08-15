@@ -6,16 +6,8 @@ Umbraco Package Download: https://our.umbraco.org/projects/backoffice-extensions
 
 <br />
 **To install:**<br />
-Download package and install via the Umbraco back office, then add the below httpHandler reference into your web.config under the <httpHandlers> node:
-```
-<add path="*.scss" verb="GET" type="dtp.umb.scsseditor.cd.SassHandler, dtp.umb.scsseditor.cd" />
-```
-Also add this handler under the <system.webServer><handlers> node:
+Download package and install via the Umbraco back office, done.
 
-```
-<remove name="DtpScssHandler" />
-<add name="DtpScssHandler" path="*.scss" verb="GET" type="dtp.umb.scsseditor.cd.ScssHandler, dtp.umb.scsseditor.cd" resourceType="File" preCondition="" />
-```
 <br />
 **Web.Config settings:**<br />
 The extension will add three appSettings key to the web.config:
